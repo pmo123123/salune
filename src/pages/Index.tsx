@@ -1,11 +1,37 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Logo from "@/components/Logo";
+import SearchBar from "@/components/SearchBar";
+import Navigation from "@/components/Navigation";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="relative min-h-screen w-full overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-background/30 backdrop-blur-sm" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        {/* Search Bar - Top Right */}
+        <div className="absolute top-8 right-8 md:top-12 md:right-12">
+          <SearchBar />
+        </div>
+
+        {/* Main Content - Centered Logo */}
+        <div className="flex-1 flex items-center justify-center px-4">
+          <Logo />
+        </div>
+
+        {/* Navigation - Bottom */}
+        <div className="pb-12 md:pb-16">
+          <Navigation />
+        </div>
       </div>
     </div>
   );
