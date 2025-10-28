@@ -10,7 +10,7 @@ const SearchBar = () => {
       <Input
         type="text"
         placeholder="SEARCH..."
-        className="pl-12 pr-4 py-6 bg-search-bg/40 backdrop-blur-md border-search-border/50 text-search-text placeholder:text-search-text/70 rounded-full font-medium tracking-wide focus-visible:ring-foreground/20"
+        className="pl-12 pr-4 py-3 bg-search-bg/40 backdrop-blur-md border-search-border/50 text-search-text placeholder:text-search-text/70 rounded-full font-medium tracking-wide focus-visible:ring-foreground/20"
       />
     </div>
   );

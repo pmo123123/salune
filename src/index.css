@@ -47,7 +47,7 @@ All colors MUST be HSL.
     /* Search bar */
     --search-bg: 0 0% 30%;
     --search-border: 0 0% 25%;
-    --search-text: 0 0% 100%;
+    --search-text: 0 0% 0%;
     
     /* Backdrop effects */
     --backdrop-blur: blur(12px);
