@@ -61,9 +61,14 @@ const ProjectDetail = () => {
                 <span>SuPp...yZ01</span>
               </div>
 
-              {/* Project Image */}
+              {/* Project Chart */}
               <div className="aspect-video bg-gray-300 rounded-lg mb-8 overflow-hidden">
-                {/* Project main image will go here */}
+                <iframe 
+                  src="https://pump.fun/coin/BTyjf4y7sLXgtahZCH6X7gGRnGgYqRFyBSDjL6u6pump"
+                  className="w-full h-full border-0"
+                  title="Pump.fun Chart"
+                  allowFullScreen
+                />
               </div>
 
               {/* Project Description */}
