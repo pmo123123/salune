@@ -63,7 +63,7 @@ const ProjectDetail = () => {
               {/* Project Description */}
               <div className="mb-8 text-black leading-relaxed">
                 <p>
-                  Selune is a decentralized platform that transforms on-chain tokens into living records of cultural creation. Each token is linked to a real project—whether a film, fashion line, exhibition, or culinary venture—and updates from the creators are published directly to the blockchain as verifiable milestones. These posts form an unfolding story that investors and followers can watch in real time, turning creative progress into natural market movement. Every interaction—support, trade, or view—feeds value back into Selune's shared treasury, which funds the next generation of projects. Open to anyone to explore yet built on verified participation, Selune operates as a transparent catalogue of modern culture: part marketplace, part archive, and part engine for collective growth.
+                  Selune was born from the crossroads of art and crypto. After being involved in Cloudy Heart with Jon Rafman, I saw firsthand what it takes to weave cultural production into Web3—and how easily that process gets lost behind spectacle. Selune was created to change that: a living catalogue where creative work is documented, verified, and circulated transparently on-chain. It's a platform that transforms speculation into stewardship, letting value flow back to the communities that create it. At its core, Selune is about building a new kind of frontier—one where technology serves meaning, and culture becomes the currency of trust.
                 </p>
               </div>
 
