@@ -1,6 +1,5 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { useEffect } from "react";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import SolanaTokenChart from "@/components/SolanaTokenChart";
@@ -9,21 +8,6 @@ import saluneLogo from "@/assets/salune-logo.png";
 
 const ProjectDetail = () => {
   const { id } = useParams();
-
-  useEffect(() => {
-    // Load Elfsight platform script
-    const script = document.createElement("script");
-    script.src = "https://elfsightcdn.com/platform.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
-  }, []);
 
   return (
     <div className="relative min-h-screen w-full">
@@ -86,14 +70,6 @@ const ProjectDetail = () => {
               {/* Project Chart */}
               <div className="mb-8">
                 <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
-              </div>
-
-              {/* Twitter Feed Widget */}
-              <div className="mb-8">
-                <div 
-                  className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" 
-                  data-elfsight-app-lazy
-                />
               </div>
             </div>
           </div>
