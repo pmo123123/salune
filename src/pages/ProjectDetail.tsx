@@ -87,7 +87,9 @@ const ProjectDetail = () => {
               </div>
 
               {/* About block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[800px]" />
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[800px]">
+                <h3 className="text-2xl font-bold text-foreground mb-4">Salune Exclusives</h3>
+              </div>
 
               {/* Live Feed block with Twitter Feed */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6">
