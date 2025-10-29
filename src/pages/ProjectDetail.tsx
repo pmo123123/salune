@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
-import saluneLogoWhite from "@/assets/salune-logo-white.png";
+import saluneLogo from "@/assets/salune-logo.png";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -39,14 +39,14 @@ const ProjectDetail = () => {
         {/* Main Content */}
         <div className="flex-1 px-4 pb-12 md:px-12">
           <div className="max-w-5xl mx-auto">
-            {/* Logo */}
-            <div className="flex justify-center mb-12">
+            {/* Logo - Clickable back to gallery */}
+            <Link to="/#gallery-section" className="flex justify-center mb-12 hover:opacity-80 transition-opacity">
               <img 
-                src={saluneLogoWhite} 
+                src={saluneLogo} 
                 alt="Salune" 
                 className="w-48 md:w-64 h-auto"
               />
-            </div>
+            </Link>
 
             {/* Project Content Container */}
             <div className="bg-white/95 rounded-lg p-8 md:p-12 backdrop-blur-sm">
