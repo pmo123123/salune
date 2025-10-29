@@ -108,9 +108,9 @@ const ProjectDetail = () => {
                 <h3 className="text-2xl font-bold text-foreground">Selune Dispatch</h3>
                 
                 {/* Two image boxes */}
-                <div className="flex-1 grid grid-cols-2 gap-4">
-                  <div className="rounded-lg ring-1 ring-black/10 bg-white/40" />
-                  <div className="rounded-lg ring-1 ring-black/10 bg-white/40" />
+                <div className="flex-1 flex flex-col gap-4">
+                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40" />
+                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40" />
                 </div>
               </div>
 
