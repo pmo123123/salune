@@ -6,6 +6,7 @@ import Navigation from "@/components/Navigation";
 import SolanaTokenChart from "@/components/SolanaTokenChart";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
+import deputyBadge from "@/assets/deputy-badge.jpg";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -71,8 +72,12 @@ const ProjectDetail = () => {
               {/* Project Info block */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px] flex flex-col gap-4">
                 <div className="flex gap-4">
-                  {/* Image placeholder */}
-                  <div className="w-24 h-24 rounded-lg bg-muted flex-shrink-0" />
+                  {/* Project badge/logo */}
+                  <img 
+                    src={deputyBadge} 
+                    alt="Deputy Sheriff Badge" 
+                    className="w-24 h-24 rounded-lg object-cover flex-shrink-0" 
+                  />
                   
                   {/* Title and date */}
                   <div className="flex-1">
