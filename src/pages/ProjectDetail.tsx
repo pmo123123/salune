@@ -94,7 +94,7 @@ const ProjectDetail = () => {
                   <img src="/placeholder.svg" alt="Exclusive Content" className="w-full h-full object-cover" />
                 </div>
                 <p className="text-sm text-muted-foreground mt-3">
-                  update date: {format(new Date(), "MMMM d, yyyy 'at' h:mm a")}
+                  Update Date: {format(new Date(), "MMMM d, yyyy 'at' h:mm a")}
                 </p>
               </div>
 
