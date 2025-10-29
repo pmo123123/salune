@@ -67,22 +67,28 @@ const ProjectDetail = () => {
             </Link>
 
             {/* Two Column Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
               {/* Left Column - 1/3 width */}
               <div className="lg:col-span-1 space-y-6">
                 {/* Icon/Mark Placeholder */}
-                <div className="bg-white/95 rounded-lg p-8 backdrop-blur-sm">
-                  <div className="text-muted-foreground text-center py-12">
+                <div 
+                  className="aspect-square rounded-[16px] flex items-center justify-center"
+                  style={{ backgroundColor: '#fafafa' }}
+                >
+                  <div className="text-gray-400 text-center text-sm">
                     Icon / Mark
                   </div>
                 </div>
 
                 {/* About Section */}
-                <div className="bg-white/95 rounded-lg p-8 backdrop-blur-sm">
-                  <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
+                <div 
+                  className="rounded-[16px] p-6 border border-gray-200"
+                  style={{ backgroundColor: '#f9f9f9' }}
+                >
+                  <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
                     ABOUT THIS PROJECT
                   </h2>
-                  <div className="text-black leading-relaxed text-sm">
+                  <div className="text-gray-700 leading-relaxed text-sm">
                     <p>
                       Five-sentence blurb goes here. Keep it clear and minimal: what this project is, what it tests, and what "good" looks like. This area is creator-facing content inside a Foundry-defined flow.
                     </p>
@@ -93,12 +99,30 @@ const ProjectDetail = () => {
               {/* Right Column - 2/3 width */}
               <div className="lg:col-span-2 space-y-6">
                 {/* Chart Widget */}
-                <div className="bg-white/95 rounded-lg p-8 backdrop-blur-sm">
+                <div 
+                  className="rounded-[16px] border overflow-hidden"
+                  style={{ 
+                    backgroundColor: '#ffffff',
+                    borderColor: '#eee',
+                    minHeight: '280px'
+                  }}
+                >
                   <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
                 </div>
 
-                {/* Twitter Feed Widget */}
-                <div className="bg-white/95 rounded-lg p-8 backdrop-blur-sm">
+                {/* Live Feed Section */}
+                <div 
+                  className="rounded-[16px] border p-6"
+                  style={{ 
+                    backgroundColor: '#ffffff',
+                    borderColor: '#eaeaea'
+                  }}
+                >
+                  <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">
+                    LIVE FEED (STATIC PREVIEW)
+                  </h2>
+                  
+                  {/* Twitter Feed Widget */}
                   <div 
                     className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" 
                     data-elfsight-app-lazy
