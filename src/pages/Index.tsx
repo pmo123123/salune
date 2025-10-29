@@ -1,4 +1,3 @@
-import Logo from "@/components/Logo";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
@@ -23,9 +22,8 @@ const Index = () => {
           <SearchBar />
         </div>
 
-        {/* Main Content - Centered Logo */}
+        {/* Main Content */}
         <div className="flex-1 flex items-center justify-center px-4">
-          <Logo />
         </div>
 
         {/* Navigation - Bottom */}
