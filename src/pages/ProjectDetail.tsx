@@ -91,7 +91,7 @@ const ProjectDetail = () => {
                   </div>
 
                   {/* Twitter Widget */}
-                  <div className="flex justify-end">
+                  <div>
                     <div className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" data-elfsight-app-lazy></div>
                   </div>
                 </div>
