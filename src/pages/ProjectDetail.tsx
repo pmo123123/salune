@@ -17,6 +17,7 @@ import saluneLogo from "@/assets/salune-logo.png";
 import nyLovesYou from "@/assets/ny-loves-you.jpg";
 import saluneTeal from "@/assets/salune-teal.png";
 import saluneMagenta from "@/assets/salune-magenta.png";
+import saluneMockup from "@/assets/salune-mockup.jpg";
 const ProjectDetail = () => {
   const {
     id
@@ -113,7 +114,7 @@ const ProjectDetail = () => {
                     </CarouselItem>
                     <CarouselItem>
                       <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
-                        <img src="/placeholder.svg" alt="Exclusive Content 3" className="w-full h-full object-cover" />
+                        <img src={saluneMockup} alt="Salune Mockup" className="w-full h-full object-cover" />
                       </div>
                     </CarouselItem>
                   </CarouselContent>
