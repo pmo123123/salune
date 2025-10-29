@@ -66,34 +66,44 @@ const ProjectDetail = () => {
               />
             </Link>
 
-            {/* Project Content Container */}
-            <div className="bg-white/95 rounded-lg p-8 md:p-12 backdrop-blur-sm">
-              <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
-                PROJECT {id}
-              </h1>
-              
-              <div className="mb-6">
-                <span className="text-sm text-black/70">10 Oct 2025</span>
+            {/* Two Column Layout */}
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+              {/* Left Column - 1/3 width */}
+              <div className="lg:col-span-1 space-y-6">
+                {/* Icon/Mark Placeholder */}
+                <div className="bg-white/95 rounded-lg p-8 backdrop-blur-sm">
+                  <div className="text-muted-foreground text-center py-12">
+                    Icon / Mark
+                  </div>
+                </div>
+
+                {/* About Section */}
+                <div className="bg-white/95 rounded-lg p-8 backdrop-blur-sm">
+                  <h2 className="text-sm font-semibold text-muted-foreground uppercase tracking-wide mb-4">
+                    ABOUT THIS PROJECT
+                  </h2>
+                  <div className="text-black leading-relaxed text-sm">
+                    <p>
+                      Five-sentence blurb goes here. Keep it clear and minimal: what this project is, what it tests, and what "good" looks like. This area is creator-facing content inside a Foundry-defined flow.
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              {/* Project Description */}
-              <div className="mb-8 text-black leading-relaxed">
-                <p>
-                  Selune is a decentralized platform that transforms on-chain tokens into living records of cultural creation. Each token is linked to a real project—whether a film, fashion line, exhibition, or culinary venture—and updates from the creators are published directly to the blockchain as verifiable milestones. These posts form an unfolding story that investors and followers can watch in real time, turning creative progress into natural market movement. Every interaction—support, trade, or view—feeds value back into Selune's shared treasury, which funds the next generation of projects. Open to anyone to explore yet built on verified participation, Selune operates as a transparent catalogue of modern culture: part marketplace, part archive, and part engine for collective growth.
-                </p>
-              </div>
+              {/* Right Column - 2/3 width */}
+              <div className="lg:col-span-2 space-y-6">
+                {/* Chart Widget */}
+                <div className="bg-white/95 rounded-lg p-8 backdrop-blur-sm">
+                  <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
+                </div>
 
-              {/* Project Chart */}
-              <div className="mb-8">
-                <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
-              </div>
-
-              {/* Twitter Feed Widget */}
-              <div className="mb-8">
-                <div 
-                  className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" 
-                  data-elfsight-app-lazy
-                />
+                {/* Twitter Feed Widget */}
+                <div className="bg-white/95 rounded-lg p-8 backdrop-blur-sm">
+                  <div 
+                    className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" 
+                    data-elfsight-app-lazy
+                  />
+                </div>
               </div>
             </div>
           </div>
