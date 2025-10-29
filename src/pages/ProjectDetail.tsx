@@ -56,9 +56,9 @@ const ProjectDetail = () => {
 
         {/* Main Content */}
         <div className="flex-1 px-4 py-8 pb-12 md:px-12 md:py-12">
-          <div className="max-w-[1400px] mx-auto">
+          <div className="max-w-[1200px] mx-auto">
             {/* Logo - Clickable back to gallery */}
-            <Link to="/#gallery-section" className="flex justify-center hover:opacity-80 transition-opacity">
+            <Link to="/#gallery-section" className="flex justify-center hover:opacity-80 transition-opacity mb-7">
               <img 
                 src={saluneLogo} 
                 alt="Salune" 
@@ -67,68 +67,143 @@ const ProjectDetail = () => {
             </Link>
 
             {/* Two Column Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {/* Left Column - 1/3 width */}
-              <div className="lg:col-span-1 space-y-6">
-                {/* Icon/Mark Placeholder */}
+            <div className="grid grid-cols-1 lg:grid-cols-[1.05fr_1.7fr] gap-6">
+              {/* LEFT COLUMN */}
+              <section className="flex flex-col gap-6">
+                {/* Icon/Mark Card */}
                 <div 
-                  className="aspect-square rounded-[16px] flex items-center justify-center"
-                  style={{ backgroundColor: '#fafafa' }}
+                  className="flex items-center justify-center min-h-[360px] rounded-[16px] border"
+                  style={{ 
+                    backgroundColor: '#fafafa',
+                    borderColor: '#e5e7eb',
+                    color: '#a1a1aa'
+                  }}
                 >
-                  <div className="text-gray-400 text-center text-sm">
-                    Icon / Mark
-                  </div>
+                  <div>Icon / Mark</div>
                 </div>
 
-                {/* About Section */}
+                {/* About Card */}
                 <div 
-                  className="rounded-[16px] p-6 border border-gray-200"
-                  style={{ backgroundColor: '#f9f9f9' }}
+                  className="p-[18px] pb-5 rounded-[16px] border"
+                  style={{ 
+                    backgroundColor: '#fafafa',
+                    borderColor: '#e5e7eb'
+                  }}
                 >
-                  <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-3">
+                  <div 
+                    className="text-xs font-semibold mb-[10px]"
+                    style={{ 
+                      letterSpacing: '0.08em',
+                      color: '#9ca3af'
+                    }}
+                  >
                     ABOUT THIS PROJECT
-                  </h2>
-                  <div className="text-gray-700 leading-relaxed text-sm">
-                    <p>
-                      Five-sentence blurb goes here. Keep it clear and minimal: what this project is, what it tests, and what "good" looks like. This area is creator-facing content inside a Foundry-defined flow.
-                    </p>
                   </div>
+                  <p className="m-0" style={{ color: '#374151' }}>
+                    Five-sentence blurb goes here. Keep it clear and minimal:
+                    what this project is, what it tests, and what &quot;good&quot; looks like.
+                    This area is creator-facing content inside a Foundry-defined flow.
+                  </p>
                 </div>
-              </div>
+              </section>
 
-              {/* Right Column - 2/3 width */}
-              <div className="lg:col-span-2 space-y-6">
-                {/* Chart Widget */}
+              {/* RIGHT COLUMN */}
+              <section className="flex flex-col gap-6">
+                {/* Chart Card */}
                 <div 
                   className="rounded-[16px] border overflow-hidden"
                   style={{ 
                     backgroundColor: '#ffffff',
-                    borderColor: '#eee',
-                    minHeight: '280px'
+                    borderColor: '#e5e7eb'
                   }}
                 >
-                  <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
+                  <div style={{ width: '100%', height: '300px' }}>
+                    <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
+                  </div>
                 </div>
 
-                {/* Live Feed Section */}
+                {/* Feed Card */}
                 <div 
-                  className="rounded-[16px] border p-6"
+                  className="p-4 rounded-[16px] border"
                   style={{ 
                     backgroundColor: '#ffffff',
-                    borderColor: '#eaeaea'
+                    borderColor: '#e5e7eb'
                   }}
                 >
-                  <h2 className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-4">
-                    LIVE FEED (STATIC PREVIEW)
-                  </h2>
-                  
-                  {/* Twitter Feed Widget */}
                   <div 
-                    className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" 
-                    data-elfsight-app-lazy
-                  />
+                    className="text-xs font-semibold mx-1 mt-[2px] mb-[10px]"
+                    style={{ 
+                      letterSpacing: '0.08em',
+                      color: '#9ca3af'
+                    }}
+                  >
+                    LIVE FEED (STATIC PREVIEW)
+                  </div>
+
+                  {/* Post 1 */}
+                  <article 
+                    className="p-3 px-[14px] rounded-xl border"
+                    style={{ 
+                      backgroundColor: '#ffffff',
+                      borderColor: '#e5e7eb'
+                    }}
+                  >
+                    <div className="flex items-center gap-2 text-[13px] mb-[6px]" style={{ color: '#6b7280' }}>
+                      <span className="font-bold" style={{ color: '#111827' }}>@your_handle_here</span>
+                      <span className="inline-block w-1 h-1 rounded-full" style={{ backgroundColor: '#d1d5db' }}></span>
+                      <span>2m</span>
+                    </div>
+                    <div className="text-[15px]" style={{ color: '#111827' }}>
+                      Some still think visibility is the goal. They don&apos;t see the membrane thinning.
+                    </div>
+                    <div className="mt-2 text-xs flex gap-3" style={{ color: '#6b7280' }}>
+                      23 Likes • 4 Reposts • 3 Replies
+                    </div>
+                  </article>
+
+                  {/* Post 2 */}
+                  <article 
+                    className="p-3 px-[14px] rounded-xl border mt-3"
+                    style={{ 
+                      backgroundColor: '#ffffff',
+                      borderColor: '#e5e7eb'
+                    }}
+                  >
+                    <div className="flex items-center gap-2 text-[13px] mb-[6px]" style={{ color: '#6b7280' }}>
+                      <span className="font-bold" style={{ color: '#111827' }}>@your_handle_here</span>
+                      <span className="inline-block w-1 h-1 rounded-full" style={{ backgroundColor: '#d1d5db' }}></span>
+                      <span>12m</span>
+                    </div>
+                    <div className="text-[15px]" style={{ color: '#111827' }}>
+                      The body was never the bait — it was the vessel. The rupture comes when you remember that.
+                    </div>
+                    <div className="mt-2 text-xs flex gap-3" style={{ color: '#6b7280' }}>
+                      89 Likes • 17 Reposts • 9 Replies
+                    </div>
+                  </article>
+
+                  {/* Post 3 */}
+                  <article 
+                    className="p-3 px-[14px] rounded-xl border mt-3"
+                    style={{ 
+                      backgroundColor: '#ffffff',
+                      borderColor: '#e5e7eb'
+                    }}
+                  >
+                    <div className="flex items-center gap-2 text-[13px] mb-[6px]" style={{ color: '#6b7280' }}>
+                      <span className="font-bold" style={{ color: '#111827' }}>@your_handle_here</span>
+                      <span className="inline-block w-1 h-1 rounded-full" style={{ backgroundColor: '#d1d5db' }}></span>
+                      <span>1h</span>
+                    </div>
+                    <div className="text-[15px]" style={{ color: '#111827' }}>
+                      You&apos;re still arguing about reflections while the mirror&apos;s cracking open.
+                    </div>
+                    <div className="mt-2 text-xs flex gap-3" style={{ color: '#6b7280' }}>
+                      140 Likes • 22 Reposts • 18 Replies
+                    </div>
+                  </article>
                 </div>
-              </div>
+              </section>
             </div>
           </div>
         </div>
