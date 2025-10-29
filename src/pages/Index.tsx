@@ -88,7 +88,7 @@ const Index = () => {
             backgroundImage: `url(${heroBackground})`,
           }}
         >
-          <div className="absolute inset-0 bg-background/30 backdrop-blur-xl" />
+          <div className="absolute inset-0 bg-background/50 backdrop-blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-[1400px] mx-auto">
