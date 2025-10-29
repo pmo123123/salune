@@ -38,7 +38,7 @@ const ProjectDetail = () => {
 
         {/* Main Content */}
         <div className="flex-1 px-4 py-8 pb-12 md:px-12 md:py-12">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-[1400px] mx-auto">
             {/* Logo - Clickable back to gallery */}
             <Link to="/#gallery-section" className="flex justify-center py-1 hover:opacity-80 transition-opacity">
               <img 
