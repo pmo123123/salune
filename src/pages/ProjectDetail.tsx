@@ -76,7 +76,7 @@ const ProjectDetail = () => {
                   
                   {/* Title and date */}
                   <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-foreground mb-2">Project Title</h2>
+                    <h2 className="text-2xl font-bold text-foreground mb-2">Salune Catalogue</h2>
                     <p className="text-sm text-muted-foreground">Published: October 29, 2025</p>
                   </div>
                 </div>
