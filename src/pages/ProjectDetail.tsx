@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
+import SolanaTokenChart from "@/components/SolanaTokenChart";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 
@@ -62,13 +63,8 @@ const ProjectDetail = () => {
               </div>
 
               {/* Project Chart */}
-              <div className="aspect-video bg-gray-300 rounded-lg mb-8 overflow-hidden">
-                <iframe 
-                  src="https://pump.fun/coin/2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv"
-                  className="w-full h-full border-0"
-                  title="Pump.fun Chart"
-                  allowFullScreen
-                />
+              <div className="mb-8">
+                <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
               </div>
 
               {/* Project Description */}
