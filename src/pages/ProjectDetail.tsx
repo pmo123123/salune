@@ -56,27 +56,22 @@ const ProjectDetail = () => {
                 PROJECT {id}
               </h1>
               
-              <div className="flex gap-4 text-sm text-black/70 mb-8">
+              <div className="flex gap-4 text-sm text-black/70 mb-6">
                 <span>10 Oct 2025</span>
                 <span>•</span>
                 <span>SuPp...yZ01</span>
               </div>
 
+              {/* Project Description */}
+              <div className="mb-8 text-black leading-relaxed">
+                <p>
+                  Selune was born from the crossroads of art and crypto. After being involved in Cloudy Heart with Jon Rafman, I saw firsthand what it takes to weave cultural production into Web3—and how easily that process gets lost behind spectacle. Selune was created to change that: a living catalogue where creative work is documented, verified, and circulated transparently on-chain. It's a platform that transforms speculation into stewardship, letting value flow back to the communities that create it. At its core, Selune is about building a new kind of frontier—one where technology serves meaning, and culture becomes the currency of trust.
+                </p>
+              </div>
+
               {/* Project Chart */}
               <div className="mb-8">
                 <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
-              </div>
-
-              {/* Project Description */}
-              <div className="space-y-6 text-black">
-                <section>
-                  <h2 className="text-2xl font-bold mb-3">About This Project</h2>
-                  <p className="leading-relaxed">
-                    Project description and details will be displayed here.
-                  </p>
-                </section>
-
-                {/* Additional project details can be added here */}
               </div>
             </div>
           </div>
