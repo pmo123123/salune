@@ -29,13 +29,9 @@ const ProjectDetail = () => {
     <div className="relative min-h-screen w-full">
       {/* Background */}
       <div 
-        className="fixed inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-        }}
-      >
-        <div className="absolute inset-0 bg-background/50 backdrop-blur-3xl" />
-      </div>
+        className="fixed inset-0"
+        style={{ backgroundColor: '#FFF9ED' }}
+      />
 
       {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
@@ -72,7 +68,7 @@ const ProjectDetail = () => {
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 w-[200px] h-[200px]" />
 
               {/* Chart block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px]">
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 min-h-[220px] md:min-h-[280px]">
                 <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
               </div>
 
