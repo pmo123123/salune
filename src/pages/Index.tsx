@@ -9,11 +9,15 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
+  const [isScrolling, setIsScrolling] = useState(false);
   
   const scrollToGallery = () => {
+    setIsScrolling(true);
     document.getElementById('gallery-section')?.scrollIntoView({ 
       behavior: 'smooth' 
     });
+    // Reset animation state after scroll completes
+    setTimeout(() => setIsScrolling(false), 1000);
   };
 
   const categories = [
@@ -58,7 +62,9 @@ const Index = () => {
           <div className="flex-1 flex items-center justify-center px-4">
             <button
               onClick={scrollToGallery}
-              className="group cursor-pointer transition-transform hover:scale-105 active:scale-95"
+              className={`group cursor-pointer transition-all duration-1000 ${
+                isScrolling ? '-translate-y-[200vh] opacity-0' : 'translate-y-0 opacity-100'
+              } hover:scale-105 active:scale-95`}
               aria-label="Enter website"
             >
               <img 
