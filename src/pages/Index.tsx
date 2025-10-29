@@ -108,7 +108,7 @@ const Index = () => {
 
           <div id="gallery-section" className="relative z-10 max-w-[1400px] mx-auto">
             {/* Black Logo */}
-            <div className="flex justify-center py-14">
+            <div className="flex justify-center py-4">
               <img 
                 src={saluneLogo} 
                 alt="Salune" 
