@@ -116,7 +116,7 @@ const ProjectDetail = () => {
                     <img src="/placeholder.svg" alt="Placeholder 2" className="w-full h-full object-cover" />
                   </div>
                   <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40 overflow-hidden">
-                    <img src="/placeholder.svg" alt="Placeholder 3" className="w-full h-full object-cover" />
+                    <img src="/placeholder.svg" alt="Placeholder 3" className="w-full h-[300px] object-cover" />
                   </div>
                 </div>
               </div>
