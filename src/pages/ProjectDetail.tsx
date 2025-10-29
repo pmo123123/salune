@@ -5,6 +5,13 @@ import { format } from "date-fns";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import SolanaTokenChart from "@/components/SolanaTokenChart";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import nyLovesYou from "@/assets/ny-loves-you.jpg";
@@ -90,9 +97,27 @@ const ProjectDetail = () => {
               {/* About block */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[800px]">
                 <h3 className="text-2xl font-bold text-foreground mb-4">Salune Exclusives</h3>
-                <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
-                  <img src="/placeholder.svg" alt="Exclusive Content" className="w-full h-full object-cover" />
-                </div>
+                <Carousel className="w-full h-[300px]">
+                  <CarouselContent>
+                    <CarouselItem>
+                      <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
+                        <img src="/placeholder.svg" alt="Exclusive Content 1" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
+                        <img src="/placeholder.svg" alt="Exclusive Content 2" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
+                        <img src="/placeholder.svg" alt="Exclusive Content 3" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                  </CarouselContent>
+                  <CarouselPrevious className="left-2" />
+                  <CarouselNext className="right-2" />
+                </Carousel>
                 <p className="text-sm text-muted-foreground mt-3">
                   Update Date: {format(new Date(), "MMMM d, yyyy 'at' h:mm a")}
                 </p>
