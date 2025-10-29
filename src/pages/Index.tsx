@@ -118,11 +118,11 @@ const Index = () => {
               {categories.map((category) => (
                 <TabsContent key={category.id} value={category.id} className="mt-0">
                   {/* Two Column Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 divide-y md:divide-y-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
                     {projects.map((project, idx) => (
                       <div 
                         key={project.id} 
-                        className={`space-y-4 py-8 ${idx > 1 ? 'border-t border-black/10' : ''} ${idx % 2 === 1 ? 'md:border-l md:border-black/10 md:pl-12' : ''}`}
+                        className={`space-y-4 py-8 ${idx > 1 ? 'border-t border-black/10' : ''}`}
                       >
                         <h3 className="text-xl font-bold text-black text-center">
                           {project.title}
