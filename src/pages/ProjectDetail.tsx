@@ -64,7 +64,7 @@ const ProjectDetail = () => {
               {/* Project Chart */}
               <div className="aspect-video bg-gray-300 rounded-lg mb-8 overflow-hidden">
                 <iframe 
-                  src="https://pump.fun/coin/BTyjf4y7sLXgtahZCH6X7gGRnGgYqRFyBSDjL6u6pump"
+                  src="https://pump.fun/coin/2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv"
                   className="w-full h-full border-0"
                   title="Pump.fun Chart"
                   allowFullScreen
