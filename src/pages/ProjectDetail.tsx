@@ -15,6 +15,7 @@ import {
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import nyLovesYou from "@/assets/ny-loves-you.jpg";
+import saluneTeal from "@/assets/salune-teal.png";
 const ProjectDetail = () => {
   const {
     id
@@ -101,7 +102,7 @@ const ProjectDetail = () => {
                   <CarouselContent>
                     <CarouselItem>
                       <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
-                        <img src="/placeholder.svg" alt="Exclusive Content 1" className="w-full h-full object-cover" />
+                        <img src={saluneTeal} alt="Salune Logo" className="w-full h-full object-cover" />
                       </div>
                     </CarouselItem>
                     <CarouselItem>
