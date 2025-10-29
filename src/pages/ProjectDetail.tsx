@@ -27,7 +27,7 @@ const ProjectDetail = () => {
           <div className="flex items-center justify-between max-w-7xl mx-auto">
             <Link 
               to="/" 
-              className="text-white hover:opacity-70 transition-opacity flex items-center gap-2"
+              className="text-black hover:opacity-70 transition-opacity flex items-center gap-2"
             >
               <ArrowLeft className="w-5 h-5" />
               <span className="text-sm font-medium">HOME</span>
