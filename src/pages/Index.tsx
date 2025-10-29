@@ -3,6 +3,7 @@ import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
+import saluneLogoWhite from "@/assets/salune-logo-white.png";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const Index = () => {
@@ -74,30 +75,55 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Gallery Section */}
-      <div id="gallery-section" className="min-h-screen bg-white px-4 py-8 md:py-12">
-        <div className="max-w-[1400px] mx-auto">
-          {/* Category Tabs */}
+      {/* Gallery Section - Continues background from hero */}
+      <div 
+        id="gallery-section" 
+        className="relative min-h-screen px-4 py-16 md:py-24"
+      >
+        {/* Background continuation from hero */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: `url(${heroBackground})`,
+          }}
+        >
+          <div className="absolute inset-0 bg-background/30 backdrop-blur-sm" />
+        </div>
+
+        <div className="relative z-10 max-w-[1400px] mx-auto">
+          {/* White Logo */}
+          <div className="flex justify-center mb-12">
+            <img 
+              src={saluneLogoWhite} 
+              alt="Salune" 
+              className="w-48 md:w-64 h-auto"
+            />
+          </div>
+
+          {/* Category Tabs - Manila folder style */}
           <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-            <TabsList className="w-full grid grid-cols-3 md:grid-cols-6 gap-2 bg-transparent h-auto p-0 mb-8">
+            <TabsList className="w-full grid grid-cols-3 md:grid-cols-6 gap-1 bg-transparent h-auto p-0 mb-0">
               {categories.map((category) => (
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
-                  className="data-[state=active]:bg-white data-[state=inactive]:bg-white/80 border border-black/20 rounded-t-2xl rounded-b-none text-black font-medium py-4 px-6 hover:bg-white transition-all"
+                  className="data-[state=active]:bg-white data-[state=inactive]:bg-white/70 border-t border-l border-r border-black/20 rounded-t-xl rounded-b-none text-black font-medium py-4 px-4 hover:bg-white transition-all data-[state=active]:border-b-0 data-[state=inactive]:border-b"
                 >
                   {category.label}
                 </TabsTrigger>
               ))}
             </TabsList>
 
-            <div className="bg-white border border-black/20 rounded-lg p-8 md:p-12">
+            <div className="bg-white border border-black/20 rounded-tr-lg rounded-b-lg p-8 md:p-12">
               {categories.map((category) => (
                 <TabsContent key={category.id} value={category.id} className="mt-0">
                   {/* Two Column Grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
-                    {projects.map((project) => (
-                      <div key={project.id} className="space-y-4">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 divide-y md:divide-y-0">
+                    {projects.map((project, idx) => (
+                      <div 
+                        key={project.id} 
+                        className={`space-y-4 py-8 ${idx > 1 ? 'border-t border-black/10' : ''} ${idx % 2 === 1 ? 'md:border-l md:border-black/10 md:pl-12' : ''}`}
+                      >
                         <h3 className="text-xl font-bold text-black text-center">
                           {project.title}
                         </h3>
