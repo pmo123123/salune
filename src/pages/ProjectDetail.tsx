@@ -11,13 +11,17 @@ const ProjectDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://elfsightcdn.com/platform.js';
+    // Load Elfsight platform script
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
     script.async = true;
     document.body.appendChild(script);
 
     return () => {
-      document.body.removeChild(script);
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
   }, []);
 
@@ -53,48 +57,43 @@ const ProjectDetail = () => {
         {/* Main Content */}
         <div className="flex-1 px-4 py-8 pb-12 md:px-12 md:py-12">
           <div className="max-w-[1400px] mx-auto">
-            {/* Two Column Layout */}
+            {/* Logo - Clickable back to gallery */}
+            <Link to="/#gallery-section" className="flex justify-center hover:opacity-80 transition-opacity">
+              <img 
+                src={saluneLogo} 
+                alt="Salune" 
+                className="w-64 md:w-96 lg:w-[500px] h-auto"
+              />
+            </Link>
+
+            {/* Project Content Container */}
             <div className="bg-white/95 rounded-lg p-8 md:p-12 backdrop-blur-sm">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12">
-                {/* First Column - 1/3 width */}
-                <div className="lg:col-span-1 space-y-6">
-                  {/* Project Icon */}
-                  <Link to="/#gallery-section" className="block hover:opacity-80 transition-opacity">
-                    <img 
-                      src={saluneLogo} 
-                      alt="Salune" 
-                      className="w-full max-w-[300px] h-auto"
-                    />
-                  </Link>
+              <h1 className="text-4xl md:text-5xl font-bold text-black mb-4">
+                PROJECT {id}
+              </h1>
+              
+              <div className="mb-6">
+                <span className="text-sm text-black/70">10 Oct 2025</span>
+              </div>
 
-                  {/* Project Name and Date */}
-                  <div>
-                    <h1 className="text-3xl md:text-4xl font-bold text-black mb-2">
-                      PROJECT {id}
-                    </h1>
-                    <span className="text-sm text-black/70">10 Oct 2025</span>
-                  </div>
+              {/* Project Description */}
+              <div className="mb-8 text-black leading-relaxed">
+                <p>
+                  Selune is a decentralized platform that transforms on-chain tokens into living records of cultural creation. Each token is linked to a real project—whether a film, fashion line, exhibition, or culinary venture—and updates from the creators are published directly to the blockchain as verifiable milestones. These posts form an unfolding story that investors and followers can watch in real time, turning creative progress into natural market movement. Every interaction—support, trade, or view—feeds value back into Selune's shared treasury, which funds the next generation of projects. Open to anyone to explore yet built on verified participation, Selune operates as a transparent catalogue of modern culture: part marketplace, part archive, and part engine for collective growth.
+                </p>
+              </div>
 
-                  {/* Project Description */}
-                  <div className="text-black leading-relaxed">
-                    <p>
-                      Selune was born from the crossroads of art and crypto. After being involved in Cloudy Heart with Jon Rafman, I saw firsthand what it takes to weave cultural production into Web3—and how easily that process gets lost behind spectacle. Selune was created to change that: a living catalogue where creative work is documented, verified, and circulated transparently on-chain. It's a platform that transforms speculation into stewardship, letting value flow back to the communities that create it. At its core, Selune is about building a new kind of frontier—one where technology serves meaning, and culture becomes the currency of trust.
-                    </p>
-                  </div>
-                </div>
+              {/* Project Chart */}
+              <div className="mb-8">
+                <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
+              </div>
 
-                {/* Second Column - 2/3 width */}
-                <div className="lg:col-span-2 space-y-8">
-                  {/* Project Chart */}
-                  <div>
-                    <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
-                  </div>
-
-                  {/* Twitter Widget */}
-                  <div>
-                    <div className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" data-elfsight-app-lazy></div>
-                  </div>
-                </div>
+              {/* Twitter Feed Widget */}
+              <div className="mb-8">
+                <div 
+                  className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" 
+                  data-elfsight-app-lazy
+                />
               </div>
             </div>
           </div>
