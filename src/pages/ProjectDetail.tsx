@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { useEffect } from "react";
+import { format } from "date-fns";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import SolanaTokenChart from "@/components/SolanaTokenChart";
@@ -92,6 +93,9 @@ const ProjectDetail = () => {
                 <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
                   <img src="/placeholder.svg" alt="Exclusive Content" className="w-full h-full object-cover" />
                 </div>
+                <p className="text-sm text-muted-foreground mt-3">
+                  update date: {format(new Date(), "MMMM d, yyyy 'at' h:mm a")}
+                </p>
               </div>
 
               {/* Live Feed block with Twitter Feed */}
