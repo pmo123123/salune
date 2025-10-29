@@ -96,6 +96,11 @@ const ProjectDetail = () => {
                 <p className="text-sm text-muted-foreground mt-3">
                   Update Date: {format(new Date(), "MMMM d, yyyy 'at' h:mm a")}
                 </p>
+                <blockquote className="mt-4 border-l-4 border-accent pl-4 italic text-foreground/80 text-sm leading-relaxed">
+                  "We've been building in the dark, tracing the outlines of a system that resists completion. None of us were trained to code. We enter these tools like trespassers: Figma, Lovable, Codex, Código. Each one promises structure, but the real work is mythic, taming the chaos of creation itself.
+                  <br /><br />
+                  There's tension in it, the kind that lives between order and collapse. Every line of code is a negotiation between impulse and restraint. We fail, we rebuild, we learn the machine's moods."
+                </blockquote>
               </div>
 
               {/* Live Feed block with Twitter Feed */}
