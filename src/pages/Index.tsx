@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
@@ -10,10 +10,20 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [showGallery, setShowGallery] = useState(false);
+  const location = useLocation();
   
   const scrollToGallery = () => {
     setShowGallery(true);
   };
+
+  useEffect(() => {
+    if (location.hash === "#gallery-section") {
+      setShowGallery(true);
+      setTimeout(() => {
+        document.getElementById("gallery-section")?.scrollIntoView({ behavior: "smooth" });
+      }, 0);
+    }
+  }, [location.hash]);
 
   const categories = [
     { id: "all", label: "ALL" },
@@ -96,7 +106,7 @@ const Index = () => {
             <div className="absolute inset-0 bg-background/50 backdrop-blur-3xl" />
           </div>
 
-          <div className="relative z-10 max-w-[1400px] mx-auto">
+          <div id="gallery-section" className="relative z-10 max-w-[1400px] mx-auto">
             {/* Black Logo */}
             <div className="flex justify-center mb-6">
               <img 
