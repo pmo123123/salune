@@ -11,11 +11,10 @@ const ProjectDetail = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    // Load Twitter widgets script
+    // Load Elfsight platform script
     const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
+    script.src = "https://elfsightcdn.com/platform.js";
     script.async = true;
-    script.charset = "utf-8";
     document.body.appendChild(script);
 
     return () => {
@@ -91,15 +90,10 @@ const ProjectDetail = () => {
 
               {/* Twitter Feed Widget */}
               <div className="mb-8">
-                <a 
-                  className="twitter-timeline"
-                  data-theme="light"
-                  data-chrome="noheader nofooter noborders transparent"
-                  data-tweet-limit="5"
-                  href="https://twitter.com/m0thb0ll"
-                >
-                  Tweets by m0thb0ll
-                </a>
+                <div 
+                  className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" 
+                  data-elfsight-app-lazy
+                />
               </div>
             </div>
           </div>
