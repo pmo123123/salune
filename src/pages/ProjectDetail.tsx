@@ -6,18 +6,17 @@ import Navigation from "@/components/Navigation";
 import SolanaTokenChart from "@/components/SolanaTokenChart";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
-import nycTaxi from "@/assets/nyc-taxi.jpg";
-
+import deputyBadge from "@/assets/deputy-badge.jpg";
 const ProjectDetail = () => {
-  const { id } = useParams();
-
+  const {
+    id
+  } = useParams();
   useEffect(() => {
     // Load Elfsight platform script
     const script = document.createElement("script");
     script.src = "https://elfsightcdn.com/platform.js";
     script.async = true;
     document.body.appendChild(script);
-
     return () => {
       // Cleanup script on unmount
       if (document.body.contains(script)) {
@@ -25,16 +24,11 @@ const ProjectDetail = () => {
       }
     };
   }, []);
-
-  return (
-    <div className="relative min-h-screen w-full">
+  return <div className="relative min-h-screen w-full">
       {/* Background */}
-      <div 
-        className="fixed inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${heroBackground})`,
-        }}
-      >
+      <div className="fixed inset-0 bg-cover bg-center" style={{
+      backgroundImage: `url(${heroBackground})`
+    }}>
         <div className="absolute inset-0 bg-background/50 backdrop-blur-3xl" />
       </div>
 
@@ -43,10 +37,7 @@ const ProjectDetail = () => {
         {/* Header */}
         {/* Header overlay - absolute, doesn't affect layout */}
         <div className="absolute top-8 left-4 md:top-12 md:left-12 z-20">
-          <Link 
-            to="/" 
-            className="text-black hover:opacity-70 transition-opacity flex items-center gap-2"
-          >
+          <Link to="/" className="text-black hover:opacity-70 transition-opacity flex items-center gap-2">
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium">HOME</span>
           </Link>
@@ -60,11 +51,7 @@ const ProjectDetail = () => {
           <div className="max-w-[1200px] mx-auto">
             {/* Logo - Clickable back to gallery */}
             <Link to="/#gallery-section" className="flex justify-center hover:opacity-80 transition-opacity mb-7">
-              <img 
-                src={saluneLogo} 
-                alt="Salune" 
-                className="w-64 md:w-96 lg:w-[500px] h-auto"
-              />
+              <img src={saluneLogo} alt="Salune" className="w-64 md:w-96 lg:w-[500px] h-auto" />
             </Link>
 
             {/* Grid Layout */}
@@ -73,11 +60,7 @@ const ProjectDetail = () => {
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px] flex flex-col gap-4">
                 <div className="flex gap-4">
                   {/* Project badge/logo */}
-                  <img 
-                    src={nycTaxi} 
-                    alt="NYC Taxi" 
-                    className="w-24 h-24 rounded-lg object-cover flex-shrink-0" 
-                  />
+                  <img src={deputyBadge} alt="Deputy Sheriff Badge" className="w-32 h-32 rounded-lg object-cover flex-shrink-0" />
                   
                   {/* Title and date */}
                   <div className="flex-1">
@@ -104,22 +87,7 @@ const ProjectDetail = () => {
               </div>
 
               {/* About block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[800px] flex flex-col gap-4">
-                <h3 className="text-2xl font-bold text-foreground">Selune Dispatch</h3>
-                
-                {/* Two image boxes */}
-                <div className="flex-1 flex flex-col gap-4">
-                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40 overflow-hidden">
-                    <img src="/placeholder.svg" alt="Placeholder 1" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40 overflow-hidden">
-                    <img src="/placeholder.svg" alt="Placeholder 2" className="w-full h-full object-cover" />
-                  </div>
-                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40 overflow-hidden">
-                    <img src="/placeholder.svg" alt="Placeholder 3" className="w-full h-[300px] object-cover" />
-                  </div>
-                </div>
-              </div>
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[800px]" />
 
               {/* Live Feed block with Twitter Feed */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6">
@@ -130,12 +98,8 @@ const ProjectDetail = () => {
         </div>
 
         {/* Navigation - Bottom */}
-        <div className="pb-12 md:pb-16">
-          <Navigation />
-        </div>
+        
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ProjectDetail;
