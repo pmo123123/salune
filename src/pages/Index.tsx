@@ -82,7 +82,7 @@ const Index = () => {
       {/* Gallery Section - Continues background from hero */}
       <div 
         id="gallery-section" 
-        className="relative min-h-screen px-4 py-16 md:py-24"
+        className="relative min-h-screen px-4 py-8 md:py-12"
       >
         {/* Gradient Blur Transition - Top */}
         <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background/40 to-transparent backdrop-blur-lg" style={{ maskImage: 'linear-gradient(to bottom, black, transparent)' }} />
@@ -99,7 +99,7 @@ const Index = () => {
 
         <div className="relative z-10 max-w-[1400px] mx-auto">
           {/* White Logo */}
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-6">
             <img 
               src={saluneLogoWhite} 
               alt="Salune" 
