@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { createChart, ColorType, CandlestickSeriesOptions } from "lightweight-charts";
+import { Button } from "@/components/ui/button";
 
 interface SolanaTokenChartProps {
   tokenMint: string;
@@ -221,7 +222,9 @@ const SolanaTokenChart = ({
             DexScreener
           </a>
         </div>
-        <div className="opacity-80">Green = up, Red = down</div>
+        <Button variant="outline" size="sm" className="text-xs">
+          Connect Wallet
+        </Button>
       </div>
     </div>
   );
