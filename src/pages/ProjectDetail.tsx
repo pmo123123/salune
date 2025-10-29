@@ -76,7 +76,7 @@ const ProjectDetail = () => {
                   <img 
                     src={deputyBadge} 
                     alt="Deputy Sheriff Badge" 
-                    className="w-24 h-24 rounded-lg object-cover flex-shrink-0" 
+                    className="w-32 h-32 rounded-lg object-cover flex-shrink-0" 
                   />
                   
                   {/* Title and date */}
