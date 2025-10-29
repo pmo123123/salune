@@ -222,9 +222,12 @@ const SolanaTokenChart = ({
             DexScreener
           </a>
         </div>
-        <Button variant="outline" size="sm" className="text-xs">
-          Connect Wallet
-        </Button>
+        <div className="flex items-center gap-3">
+          <div className="opacity-80">Green = up, Red = down</div>
+          <Button variant="outline" size="sm" className="text-xs">
+            Connect Wallet
+          </Button>
+        </div>
       </div>
     </div>
   );
