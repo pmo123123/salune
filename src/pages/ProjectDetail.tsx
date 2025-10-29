@@ -26,11 +26,11 @@ const ProjectDetail = () => {
         <div className="px-4 py-8 md:px-12 md:py-12">
           <div className="flex items-center justify-between max-w-7xl mx-auto">
             <Link 
-              to="/#gallery-section" 
+              to="/" 
               className="text-white hover:opacity-70 transition-opacity flex items-center gap-2"
             >
               <ArrowLeft className="w-5 h-5" />
-              <span className="text-sm font-medium">BACK</span>
+              <span className="text-sm font-medium">HOME</span>
             </Link>
             <SearchBar />
           </div>
