@@ -94,50 +94,22 @@ const Index = () => {
             <div className="bg-white border border-black/20 rounded-lg p-8 md:p-12">
               {categories.map((category) => (
                 <TabsContent key={category.id} value={category.id} className="mt-0">
-                  {/* Two Column Grid with Divider */}
-                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 relative">
-                    {/* Left Column */}
-                    <div className="space-y-16">
-                      {projects
-                        .filter((_, idx) => idx % 2 === 0)
-                        .map((project) => (
-                          <div key={project.id} className="space-y-4">
-                            <h3 className="text-xl font-bold text-black text-center">
-                              {project.title}
-                            </h3>
-                            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                              {/* Placeholder for project image */}
-                            </div>
-                            <div className="flex justify-between text-sm text-black">
-                              <span>{project.date}</span>
-                              <span>{project.code}</span>
-                            </div>
-                          </div>
-                        ))}
-                    </div>
-
-                    {/* Vertical Divider */}
-                    <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-black/20 -translate-x-1/2" />
-
-                    {/* Right Column */}
-                    <div className="space-y-16">
-                      {projects
-                        .filter((_, idx) => idx % 2 === 1)
-                        .map((project) => (
-                          <div key={project.id} className="space-y-4">
-                            <h3 className="text-xl font-bold text-black text-center">
-                              {project.title}
-                            </h3>
-                            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                              {/* Placeholder for project image */}
-                            </div>
-                            <div className="flex justify-between text-sm text-black">
-                              <span>{project.date}</span>
-                              <span>{project.code}</span>
-                            </div>
-                          </div>
-                        ))}
-                    </div>
+                  {/* Two Column Grid */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+                    {projects.map((project) => (
+                      <div key={project.id} className="space-y-4">
+                        <h3 className="text-xl font-bold text-black text-center">
+                          {project.title}
+                        </h3>
+                        <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
+                          {/* Placeholder for project image */}
+                        </div>
+                        <div className="flex justify-between text-sm text-black">
+                          <span>{project.date}</span>
+                          <span>{project.code}</span>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </TabsContent>
               ))}
