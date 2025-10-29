@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
@@ -124,12 +125,16 @@ const Index = () => {
                         key={project.id} 
                         className={`space-y-4 py-8 ${idx > 1 ? 'border-t border-black/10' : ''}`}
                       >
-                        <h3 className="text-xl font-bold text-black text-center">
-                          {project.title}
-                        </h3>
-                        <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden">
-                          {/* Placeholder for project image */}
-                        </div>
+                        <Link to={`/project/${project.id}`}>
+                          <h3 className="text-xl font-bold text-black text-center hover:opacity-70 transition-opacity cursor-pointer">
+                            {project.title}
+                          </h3>
+                        </Link>
+                        <Link to={`/project/${project.id}`} className="block">
+                          <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer">
+                            {/* Placeholder for project image */}
+                          </div>
+                        </Link>
                         <div className="flex justify-between text-sm text-black">
                           <span>{project.date}</span>
                           <span>{project.code}</span>
