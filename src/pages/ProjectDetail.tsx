@@ -18,6 +18,7 @@ import nyLovesYou from "@/assets/ny-loves-you.jpg";
 import saluneTeal from "@/assets/salune-teal.png";
 import saluneMagenta from "@/assets/salune-magenta.png";
 import saluneMockup from "@/assets/salune-mockup.jpg";
+import saluneBadge from "@/assets/salune-badge.png";
 const ProjectDetail = () => {
   const {
     id
@@ -71,7 +72,7 @@ const ProjectDetail = () => {
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px] flex flex-col gap-4">
                 <div className="flex gap-4">
                   {/* Project badge/logo */}
-                  <img src={nyLovesYou} alt="New York Loves You" className="w-32 h-32 rounded-lg object-cover flex-shrink-0" />
+                  <img src={saluneBadge} alt="New York Loves You" className="w-32 h-32 rounded-lg object-cover flex-shrink-0" />
                   
                   {/* Title and date */}
                   <div className="flex-1">
