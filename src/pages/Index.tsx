@@ -74,6 +74,9 @@ const Index = () => {
             <Navigation />
           </div>
         </div>
+
+        {/* Gradient Blur Transition Overlay */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-b from-transparent to-background/40 backdrop-blur-[2px]" style={{ maskImage: 'linear-gradient(to bottom, transparent, black)' }} />
       </div>
 
       {/* Gallery Section - Continues background from hero */}
@@ -81,6 +84,9 @@ const Index = () => {
         id="gallery-section" 
         className="relative min-h-screen px-4 py-16 md:py-24"
       >
+        {/* Gradient Blur Transition - Top */}
+        <div className="absolute top-0 left-0 right-0 h-48 bg-gradient-to-b from-background/40 to-transparent backdrop-blur-lg" style={{ maskImage: 'linear-gradient(to bottom, black, transparent)' }} />
+        
         {/* Background continuation from hero */}
         <div 
           className="absolute inset-0 bg-cover bg-center"
