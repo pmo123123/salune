@@ -73,7 +73,7 @@ const ProjectDetail = () => {
               </div>
 
               {/* About block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 min-h-[180px]" />
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 min-h-[280px]" />
 
               {/* Live Feed block with three empty posts */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 space-y-3">
