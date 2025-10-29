@@ -6,7 +6,7 @@ import Navigation from "@/components/Navigation";
 import SolanaTokenChart from "@/components/SolanaTokenChart";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
-import deputyBadge from "@/assets/deputy-badge.jpg";
+import nycTaxi from "@/assets/nyc-taxi.jpg";
 
 const ProjectDetail = () => {
   const { id } = useParams();
@@ -74,8 +74,8 @@ const ProjectDetail = () => {
                 <div className="flex gap-4">
                   {/* Project badge/logo */}
                   <img 
-                    src={deputyBadge} 
-                    alt="Deputy Sheriff Badge" 
+                    src={nycTaxi} 
+                    alt="NYC Taxi" 
                     className="w-24 h-24 rounded-lg object-cover flex-shrink-0" 
                   />
                   
