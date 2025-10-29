@@ -29,9 +29,13 @@ const ProjectDetail = () => {
     <div className="relative min-h-screen w-full">
       {/* Background */}
       <div 
-        className="fixed inset-0"
-        style={{ backgroundColor: '#FFF9ED' }}
-      />
+        className="fixed inset-0 bg-cover bg-center"
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+        }}
+      >
+        <div className="absolute inset-0 bg-background/50 backdrop-blur-3xl" />
+      </div>
 
       {/* Content */}
       <div className="relative z-10 flex flex-col min-h-screen">
