@@ -101,11 +101,9 @@ const ProjectDetail = () => {
               {/* About block */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[800px]" />
 
-              {/* Live Feed block with three empty posts */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 space-y-3">
-                <div className="rounded-xl ring-1 ring-black/10 bg-white h-20" />
-                <div className="rounded-xl ring-1 ring-black/10 bg-white h-20" />
-                <div className="rounded-xl ring-1 ring-black/10 bg-white h-20" />
+              {/* Live Feed block with Twitter Feed */}
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6">
+                <div className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" data-elfsight-app-lazy></div>
               </div>
             </div>
           </div>
