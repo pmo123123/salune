@@ -109,8 +109,12 @@ const ProjectDetail = () => {
                 
                 {/* Two image boxes */}
                 <div className="flex-1 flex flex-col gap-4">
-                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40" />
-                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40" />
+                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40 overflow-hidden">
+                    <img src="/placeholder.svg" alt="Placeholder 1" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="flex-1 rounded-lg ring-1 ring-black/10 bg-white/40 overflow-hidden">
+                    <img src="/placeholder.svg" alt="Placeholder 2" className="w-full h-full object-cover" />
+                  </div>
                 </div>
               </div>
 
