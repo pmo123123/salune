@@ -56,10 +56,8 @@ const ProjectDetail = () => {
                 PROJECT {id}
               </h1>
               
-              <div className="flex gap-4 text-sm text-black/70 mb-6">
-                <span>10 Oct 2025</span>
-                <span>•</span>
-                <span>SuPp...yZ01</span>
+              <div className="mb-6">
+                <span className="text-sm text-black/70">10 Oct 2025</span>
               </div>
 
               {/* Project Description */}
