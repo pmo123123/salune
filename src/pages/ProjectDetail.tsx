@@ -68,8 +68,30 @@ const ProjectDetail = () => {
 
             {/* Grid Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {/* Icon/Mark block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 w-[200px] h-[200px]" />
+              {/* Project Info block */}
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px] flex flex-col gap-4">
+                <div className="flex gap-4">
+                  {/* Image placeholder */}
+                  <div className="w-24 h-24 rounded-lg bg-muted flex-shrink-0" />
+                  
+                  {/* Title and date */}
+                  <div className="flex-1">
+                    <h2 className="text-2xl font-bold text-foreground mb-2">Project Title</h2>
+                    <p className="text-sm text-muted-foreground">Published: October 29, 2025</p>
+                  </div>
+                </div>
+                
+                {/* Description */}
+                <div className="flex-1 overflow-auto">
+                  <p className="text-foreground leading-relaxed">
+                    Salune is a revolutionary platform that brings together creativity and innovation. 
+                    This project showcases the best of what's possible when technology meets artistic vision. 
+                    Built with cutting-edge tools and designed for the future, Salune represents a new era 
+                    of digital experiences. Join us on this journey as we explore new frontiers and push 
+                    the boundaries of what's achievable.
+                  </p>
+                </div>
+              </div>
 
               {/* Chart block */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px]">
