@@ -72,7 +72,7 @@ const ProjectDetail = () => {
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 w-[200px] h-[200px]" />
 
               {/* Chart block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 min-h-[220px] md:min-h-[280px]">
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px]">
                 <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
               </div>
 
