@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 
@@ -15,21 +14,14 @@ const About = () => {
       
       {/* Overlay */}
       <div className="fixed inset-0 z-0 bg-background/30 backdrop-blur-sm" />
-      {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border relative">
-        <div className="container mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            <Link 
-              to="/" 
-              className="flex items-center gap-2 text-foreground hover:opacity-70 transition-opacity"
-            >
-              <ArrowLeft className="w-5 h-5" />
-              <span className="font-medium">Back to Home</span>
-            </Link>
-            <Navigation />
-          </div>
-        </div>
-      </header>
+      {/* Back Button */}
+      <Link 
+        to="/" 
+        className="fixed top-8 left-8 md:top-12 md:left-12 z-50 bg-white/80 hover:bg-white border border-black/20 rounded-full p-3 transition-all hover:scale-110 active:scale-95 shadow-lg"
+        aria-label="Back to home"
+      >
+        <ArrowLeft className="w-5 h-5 text-black" />
+      </Link>
 
       {/* Main Content */}
       <main className="pt-24 pb-16 relative z-10">
