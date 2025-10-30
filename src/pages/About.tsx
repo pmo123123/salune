@@ -38,50 +38,6 @@ const About = () => {
           <div className="flex justify-center mb-12">
             <img src={saluneLogo} alt="Salune Logo" className="w-64 h-auto" />
           </div>
-
-          {/* About Content */}
-          <article className="space-y-8">
-            <section>
-              <h1 className="text-4xl font-bold text-foreground mb-6">About Salune</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Salune is a creative platform showcasing innovative projects and ideas. 
-                We bring together design, technology, and storytelling to create unique experiences.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Our Mission</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Our mission is to inspire creativity and foster innovation by presenting 
-                curated projects that push boundaries and challenge conventions.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">What We Do</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                We curate and showcase exceptional projects across various disciplines, 
-                providing a platform for creators to share their work with a wider audience. 
-                From design and technology to art and culture, we celebrate innovation in all its forms.
-              </p>
-            </section>
-
-            <section>
-              <h2 className="text-2xl font-bold text-foreground mb-4">Get in Touch</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                Interested in collaborating or learning more? Follow us on{" "}
-                <a 
-                  href="https://x.com/Selune_io" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-accent hover:underline font-medium"
-                >
-                  X (formerly Twitter)
-                </a>
-                {" "}to stay updated with our latest projects and announcements.
-              </p>
-            </section>
-          </article>
         </div>
       </main>
     </div>
