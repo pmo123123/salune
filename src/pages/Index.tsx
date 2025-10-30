@@ -131,7 +131,10 @@ const Index = () => {
 
             {/* Back to top button */}
             <button
-              onClick={() => setShowGallery(false)}
+              onClick={() => {
+                setShowGallery(false);
+                setShowVideo(true);
+              }}
               className="fixed top-8 right-8 md:top-12 md:right-12 z-50 bg-white/80 hover:bg-white border border-black/20 rounded-full p-3 transition-all hover:scale-110 active:scale-95 shadow-lg"
               aria-label="Back to landing page"
             >
