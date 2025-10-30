@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { ArrowUp } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import { WaitlistForm } from "@/components/WaitlistForm";
@@ -119,6 +120,15 @@ const Index = () => {
           </div>
 
           <div id="gallery-section" className="relative z-10 max-w-[1400px] mx-auto">
+            {/* Back to top button */}
+            <button
+              onClick={() => setShowGallery(false)}
+              className="fixed top-8 right-8 md:top-12 md:right-12 z-50 bg-white/80 hover:bg-white border border-black/20 rounded-full p-3 transition-all hover:scale-110 active:scale-95 shadow-lg"
+              aria-label="Back to landing page"
+            >
+              <ArrowUp className="w-5 h-5 text-black" />
+            </button>
+
             {/* Black Logo */}
             <div className="flex justify-center">
               <img 
