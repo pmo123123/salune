@@ -14,7 +14,7 @@ const About = () => {
       />
       
       {/* Overlay */}
-      <div className="fixed inset-0 z-0 bg-background/90 backdrop-blur-sm" />
+      <div className="fixed inset-0 z-0 bg-background/30 backdrop-blur-sm" />
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border relative">
         <div className="container mx-auto px-4 py-4">
