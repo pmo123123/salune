@@ -159,7 +159,7 @@ const Index = () => {
                           </Link>
                           <Link to={`/project/${project.id}`} className="block">
                             <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center">
-                              <img src={project.image} alt={project.title} className="w-1/2 h-auto object-contain" />
+                              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                             </div>
                           </Link>
                           <div className="flex justify-between text-sm text-black">
