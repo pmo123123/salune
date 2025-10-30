@@ -16,7 +16,7 @@ const About = () => {
 
 ★ In New York, hype burns bright and dies by morning.`
     },
-    { title: "Slide 2", description: "Description text goes here" },
+    { title: "Rewiring the Rush", description: "Description text goes here" },
     { title: "Slide 3", description: "Description text goes here" },
     { title: "Slide 4", description: "Description text goes here" },
     { title: "Slide 5", description: "Description text goes here" },
