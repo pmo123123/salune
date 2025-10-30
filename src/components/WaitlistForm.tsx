@@ -6,17 +6,11 @@ import { Input } from "@/components/ui/input";
 import { useToast } from "@/hooks/use-toast";
 
 const waitlistSchema = z.object({
-  name: z.string()
-    .trim()
-    .min(1, { message: "Name is required" })
-    .max(100, { message: "Name must be less than 100 characters" }),
-  email: z.string()
-    .trim()
-    .email({ message: "Invalid email address" })
-    .max(255, { message: "Email must be less than 255 characters" })
+  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
+  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
 });
 
-const WaitlistForm = () => {
+export const WaitlistForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,12 +18,12 @@ const WaitlistForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate input
+    const result = waitlistSchema.safeParse({ name, email });
     
-    // Validate inputs
-    const validation = waitlistSchema.safeParse({ name, email });
-    
-    if (!validation.success) {
-      const errors = validation.error.errors;
+    if (!result.success) {
+      const errors = result.error.errors;
       toast({
         title: "Validation Error",
         description: errors[0].message,
@@ -43,34 +37,36 @@ const WaitlistForm = () => {
     try {
       const { error } = await supabase
         .from("waitlist")
-        .insert([{ 
-          name: validation.data.name, 
-          email: validation.data.email 
-        }]);
+        .insert([{ name: result.data.name, email: result.data.email }]);
 
       if (error) {
-        // Check for duplicate email
-        if (error.code === '23505') {
+        // Handle duplicate email error
+        if (error.code === "23505") {
           toast({
-            title: "Already on the waitlist",
-            description: "This email is already registered!",
+            title: "Already on the list!",
+            description: "This email is already registered for the waitlist.",
             variant: "destructive",
           });
         } else {
-          throw error;
+          toast({
+            title: "Error",
+            description: "Failed to join waitlist. Please try again.",
+            variant: "destructive",
+          });
         }
       } else {
         toast({
           title: "Success!",
           description: "You've been added to the waitlist.",
         });
+        // Clear form
         setName("");
         setEmail("");
       }
     } catch (error) {
       toast({
         title: "Error",
-        description: "Something went wrong. Please try again.",
+        description: "An unexpected error occurred. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -79,45 +75,36 @@ const WaitlistForm = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto p-6 bg-white/90 backdrop-blur-sm rounded-lg shadow-lg border border-black/10">
-      <h2 className="text-2xl font-bold text-center mb-2 text-black">Join the Waitlist</h2>
-      <p className="text-center text-black/70 mb-6 text-sm">Be the first to know when we launch</p>
-      
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <div>
-          <Input
-            type="text"
-            placeholder="Your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            disabled={isSubmitting}
-            className="w-full"
-            required
-          />
-        </div>
-        
-        <div>
-          <Input
-            type="email"
-            placeholder="Your email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            disabled={isSubmitting}
-            className="w-full"
-            required
-          />
-        </div>
-        
-        <Button 
-          type="submit" 
-          className="w-full"
+    <form onSubmit={handleSubmit} className="w-full max-w-md space-y-4">
+      <div className="space-y-2">
+        <Input
+          type="text"
+          placeholder="Your Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
           disabled={isSubmitting}
-        >
-          {isSubmitting ? "Joining..." : "Join Waitlist"}
-        </Button>
-      </form>
-    </div>
+          className="bg-white/90 backdrop-blur-sm border-black/20 text-black placeholder:text-black/50"
+          required
+        />
+      </div>
+      <div className="space-y-2">
+        <Input
+          type="email"
+          placeholder="Your Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          disabled={isSubmitting}
+          className="bg-white/90 backdrop-blur-sm border-black/20 text-black placeholder:text-black/50"
+          required
+        />
+      </div>
+      <Button
+        type="submit"
+        disabled={isSubmitting}
+        className="w-full"
+      >
+        {isSubmitting ? "Joining..." : "Join Waitlist"}
+      </Button>
+    </form>
   );
 };
-
-export default WaitlistForm;

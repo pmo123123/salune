@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
-import WaitlistForm from "@/components/WaitlistForm";
+import { WaitlistForm } from "@/components/WaitlistForm";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneLogoWhite from "@/assets/salune-logo-white.png";
