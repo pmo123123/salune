@@ -50,7 +50,7 @@ const About = () => {
 
 ★ Treasury reinvests in new projects.
 
-★ Value circulates /-/ not extracted.`
+★ Value circulates =/= not extracted.`
     },
     { title: "Slide 6", description: "Description text goes here" },
     { title: "Slide 7", description: "Description text goes here" },
