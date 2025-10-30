@@ -2,8 +2,6 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
-import saluneSlide1 from "@/assets/salune-slide-1.png";
-import officeWorkspace from "@/assets/office-workspace.jpg";
 import miningTools from "@/assets/mining-tools.jpg";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
 import wheatField from "@/assets/wheat-field.jpg";
@@ -14,28 +12,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const About = () => {
   const slides = [
-    { 
-      title: "The Dust Don't Settle Here", 
-      description: `★ Speculation moves fast, but it doesn't build roots.
-
-★ Billions flow daily through Solana. Cultural producers see none of it.
-
-★ We've got attention, not alignment.
-
-★ In New York, hype burns bright and dies by morning.`,
-      image: saluneSlide1
-    },
-    { 
-      title: "Rewiring the Rush", 
-      description: `★ Selune ties coins to real creation - art, food, film, spaces.
-
-★ Each project becomes a living record OC.
-
-★ Built on Solana for speed and transparency.
-
-★ Turns markets into mediums, and speculation into structure.`,
-      image: officeWorkspace
-    },
     { 
       title: "Tools of the Trade", 
       description: `★ Verified mints tied to creative production updates.
