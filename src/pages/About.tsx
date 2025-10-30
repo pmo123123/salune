@@ -47,7 +47,7 @@ const About = () => {
           </div>
 
           {/* Carousel Section */}
-          <div className="max-w-2xl mx-auto mt-[50px]">
+          <div className="max-w-2xl mx-auto mt-[150px]">
             <Carousel className="w-full">
               <CarouselContent>
                 {Array.from({ length: 8 }).map((_, index) => (
