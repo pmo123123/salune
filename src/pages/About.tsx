@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneSlide1 from "@/assets/salune-slide-1.png";
-import saluneSlide2 from "@/assets/salune-slide-2.png";
+import officeWorkspace from "@/assets/office-workspace.jpg";
 import saluneSlide3 from "@/assets/salune-slide-3.png";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
 import saluneSlide7 from "@/assets/salune-slide-7.png";
@@ -33,7 +33,7 @@ const About = () => {
 ★ Built on Solana for speed and transparency.
 
 ★ Turns markets into mediums, and speculation into structure.`,
-      image: saluneSlide2
+      image: officeWorkspace
     },
     { 
       title: "Tools of the Trade", 
