@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
-import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import heroBackground from "@/assets/hero-background.jpg";
@@ -67,11 +66,6 @@ const Index = () => {
 
           {/* Content */}
           <div className="relative z-10 flex flex-col min-h-screen">
-            {/* Search Bar - Top Right */}
-            <div className="absolute top-8 right-8 md:top-12 md:right-12">
-              <SearchBar />
-            </div>
-
             {/* Centered Logo Button */}
             <div className="flex-1 flex items-center justify-center px-4">
               <div className="flex flex-col items-center gap-4">
