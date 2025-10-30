@@ -27,7 +27,7 @@ const About = () => {
       <main className="pt-24 pb-16 relative z-10">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Logo Section */}
-          <div className="flex justify-center mb-12" style={{ marginTop: "-200px" }}>
+          <div className="flex justify-center mb-12" style={{ marginTop: "-120px" }}>
             <img src={saluneLogo} alt="Salune Logo" className="w-64 h-auto" />
           </div>
 
