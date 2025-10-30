@@ -4,6 +4,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneSlide1 from "@/assets/salune-slide-1.jpg";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
+import saluneSlide7 from "@/assets/salune-slide-7.png";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const About = () => {
@@ -74,7 +75,7 @@ const About = () => {
 ★Background in crypto marketing and community building
 
 ★Selune extends that backbone to a broader creative ecosystem`,
-      image: undefined 
+      image: saluneSlide7 
     },
     { 
       title: "The New Frontier", 
