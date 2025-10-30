@@ -165,8 +165,8 @@ const About = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="bg-white hover:bg-white/90 border-white text-black" />
+              <CarouselNext className="bg-white hover:bg-white/90 border-white text-black" />
             </Carousel>
           </div>
         </div>
