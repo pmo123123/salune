@@ -103,7 +103,7 @@ export const WaitlistForm = () => {
         disabled={isSubmitting}
         className="w-full"
       >
-        {isSubmitting ? "Joining..." : "Join Waitlist"}
+        {isSubmitting ? "Joining Rodeo..." : "Join the Rodeo"}
       </Button>
     </form>
   );
