@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
+import saluneSlide1 from "@/assets/salune-slide-1.jpg";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -16,7 +17,7 @@ const About = () => {
 ★ We've got attention, not alignment.
 
 ★ In New York, hype burns bright and dies by morning.`,
-      image: undefined
+      image: saluneSlide1
     },
     { 
       title: "Rewiring the Rush", 
