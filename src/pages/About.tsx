@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
+import saluneSlide4 from "@/assets/salune-slide-4.png";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const About = () => {
@@ -14,7 +15,8 @@ const About = () => {
 
 ★ We've got attention, not alignment.
 
-★ In New York, hype burns bright and dies by morning.`
+★ In New York, hype burns bright and dies by morning.`,
+      image: undefined
     },
     { 
       title: "Rewiring the Rush", 
@@ -24,7 +26,8 @@ const About = () => {
 
 ★ Built on Solana for speed and transparency.
 
-★ Turns markets into mediums, and speculation into structure.`
+★ Turns markets into mediums, and speculation into structure.`,
+      image: undefined
     },
     { 
       title: "Tools of the Trade", 
@@ -34,7 +37,8 @@ const About = () => {
 
 ★ Royalties loop back to creators & angel investors via treasury
 
-★ Culture financing culture.`
+★ Culture financing culture.`,
+      image: undefined
     },
     { 
       title: "Where the Streets Meet the Chain", 
@@ -42,7 +46,8 @@ const About = () => {
 
 ★ Launching from New York City = the world's creative testbed.
 
-★ Guerrilla campaigns spark curiosity and online buzz.`
+★ Guerrilla campaigns spark curiosity and online buzz.`,
+      image: saluneSlide4
     },
     { 
       title: "The Circular Trail", 
@@ -106,9 +111,15 @@ const About = () => {
                   <CarouselItem key={index}>
                     <div className="p-4">
                       <div className="space-y-4">
-                        {/* Image Placeholder */}
-                        <div className="aspect-square max-w-md mx-auto bg-muted rounded-lg border-2 border-border flex items-center justify-center">
-                          <span className="text-muted-foreground">Image {index + 1}</span>
+                        {/* Image */}
+                        <div className="aspect-square max-w-md mx-auto rounded-lg border-2 border-border overflow-hidden">
+                          {slide.image ? (
+                            <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+                          ) : (
+                            <div className="w-full h-full bg-muted flex items-center justify-center">
+                              <span className="text-muted-foreground">Image {index + 1}</span>
+                            </div>
+                          )}
                         </div>
                         {/* Text Space */}
                         <div className="text-center space-y-2">
