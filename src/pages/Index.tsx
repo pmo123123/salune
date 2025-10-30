@@ -8,7 +8,7 @@ import saluneLogo from "@/assets/salune-logo.png";
 import saluneLogoWhite from "@/assets/salune-logo-white.png";
 import sheriffStar from "@/assets/sheriff-star.png";
 import bloomGrocerBag from "@/assets/bloom-grocer-bag.png";
-import newspaperStack from "@/assets/newspaper-stack.jpg";
+import newspaperStack from "@/assets/newspaper-stack.png";
 import saluneMockup from "@/assets/salune-mockup.jpg";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
