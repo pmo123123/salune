@@ -69,7 +69,7 @@ const Index = () => {
 
             {/* Centered Logo Button */}
             <div className="flex-1 flex items-center justify-center px-4">
-              <div className="flex flex-col items-center gap-8">
+              <div className="flex flex-col items-center gap-4">
                 <button
                   onClick={scrollToGallery}
                   className="group cursor-pointer transition-transform hover:scale-105 active:scale-95"
