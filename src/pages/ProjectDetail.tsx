@@ -17,7 +17,7 @@ import saluneLogo from "@/assets/salune-logo.png";
 import nyLovesYou from "@/assets/ny-loves-you.jpg";
 import saluneTeal from "@/assets/salune-teal.png";
 import saluneMagenta from "@/assets/salune-magenta.png";
-import saluneMockup from "@/assets/salune-mockup.jpg";
+import saluneMockup from "@/assets/salune-mockup.png";
 import saluneBadge from "@/assets/salune-badge.png";
 const ProjectDetail = () => {
   const {
