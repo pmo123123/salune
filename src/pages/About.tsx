@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
-import saluneSlide1 from "@/assets/salune-slide-1.jpg";
+import saluneSlide1 from "@/assets/salune-slide-1.png";
 import saluneSlide2 from "@/assets/salune-slide-2.png";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
 import saluneSlide7 from "@/assets/salune-slide-7.png";
