@@ -158,7 +158,7 @@ const Index = () => {
                             </h3>
                           </Link>
                           <Link to={`/project/${project.id}`} className="block">
-                            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center">
+                            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center border-2 border-black/20">
                               <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                             </div>
                           </Link>
