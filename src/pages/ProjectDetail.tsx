@@ -84,13 +84,15 @@ const ProjectDetail = () => {
                 
                 {/* Description */}
                 <div className="flex-1 overflow-auto">
-                  <p className="text-foreground leading-relaxed">
-                    Salune is a revolutionary platform that brings together creativity and innovation. 
-                    This project showcases the best of what's possible when technology meets artistic vision. 
-                    Built with cutting-edge tools and designed for the future, Salune represents a new era 
-                    of digital experiences. Join us on this journey as we explore new frontiers and push 
-                    the boundaries of what's achievable.
-                  </p>
+                <p className="text-foreground leading-relaxed">
+                  Salune is a new kind of platform where culture, creativity, and blockchain innovation meet under one roof. Inspired by the idea of a saloon for the digital frontier, it's a place where creators, patrons, and explorers gather to exchange ideas, stories, and value. Each project on Salune functions like an item on a menu, an offering of vision and craft, served with transparency and intent.
+                  <br /><br />
+                  Built on Solana's high-speed infrastructure, Salune transforms the energy of the internet into something human again: collaboration, experimentation, and storytelling. Rooted in cypherpunk values, it champions autonomy, transparency, and the right to build outside institutions, proving that code can protect creativity as much as it powers it. It's designed not just as a platform, but as an atmosphere. A space that invites participation and curiosity. Here, technology doesn't replace creativity; it amplifies it.
+                  <br /><br />
+                  Salune represents a new chapter for the web, where design meets decentralization, and where each interaction helps shape the culture of tomorrow. Step inside, explore the menu, and find your place at the counter of this evolving frontier.
+                  <br /><br />
+                  <strong>Contributors:</strong> Project Manager: Paige Oosterom | Branding: Lisa Lagova
+                </p>
                 </div>
               </div>
 
