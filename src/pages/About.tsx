@@ -36,7 +36,7 @@ const About = () => {
 
 ★ Culture financing culture.`
     },
-    { title: "Slide 4", description: "Description text goes here" },
+    { title: "Where the Streets Meet the Chain", description: "Description text goes here" },
     { title: "Slide 5", description: "Description text goes here" },
     { title: "Slide 6", description: "Description text goes here" },
     { title: "Slide 7", description: "Description text goes here" },
