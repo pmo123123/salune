@@ -25,32 +25,53 @@ const ProjectDetail = () => {
     id
   } = useParams();
   useEffect(() => {
-    const USER_URL = "https://twitter.com/Saluneio";
+    const USER = "Saluneio";
     const REFRESH_MS = 60000; // 1 minute
 
-    function loadEmbed() {
-      const container = document.getElementById("x-feed");
-      if (container) {
-        container.innerHTML = `
-          <a class="twitter-timeline"
-             data-theme="light"
-             data-chrome="noheader nofooter noborders transparent"
-             data-tweet-limit="5"
-             href="${USER_URL}">
-            Tweets by @Saluneio
-          </a>
-        `;
-        // Load/reload widget script
+    const loadTwitterScript = () =>
+      new Promise<any>((resolve) => {
+        const w = window as any;
+        if (w.twttr?.widgets) return resolve(w.twttr);
+
+        const existing = document.getElementById("twitter-wjs");
+        if (existing) {
+          const check = () =>
+            w.twttr?.widgets ? resolve(w.twttr) : setTimeout(check, 50);
+          check();
+          return;
+        }
+
         const script = document.createElement("script");
+        script.id = "twitter-wjs";
         script.async = true;
         script.src = "https://platform.twitter.com/widgets.js";
         script.charset = "utf-8";
+        script.onload = () => resolve((window as any).twttr);
         document.body.appendChild(script);
-      }
-    }
+      });
 
-    loadEmbed();
-    const interval = setInterval(loadEmbed, REFRESH_MS);
+    const render = async () => {
+      const container = document.getElementById("x-feed");
+      if (!container) return;
+      container.innerHTML = "";
+      try {
+        const twttr: any = await loadTwitterScript();
+        await twttr.widgets.createTimeline(
+          { sourceType: "profile", screenName: USER },
+          container,
+          {
+            theme: "light",
+            chrome: "noheader nofooter noborders transparent",
+            tweetLimit: 5,
+          }
+        );
+      } catch (e) {
+        console.error("Failed to render X timeline:", e);
+      }
+    };
+
+    render();
+    const interval = window.setInterval(render, REFRESH_MS);
 
     return () => {
       clearInterval(interval);
