@@ -36,7 +36,14 @@ const About = () => {
 
 ★ Culture financing culture.`
     },
-    { title: "Where the Streets Meet the Chain", description: "Description text goes here" },
+    { 
+      title: "Where the Streets Meet the Chain", 
+      description: `★ For cultural producers and crypto patrons alike.
+
+★ Launching from New York City = the world's creative testbed.
+
+★ Guerrilla campaigns spark curiosity and online buzz.`
+    },
     { title: "Slide 5", description: "Description text goes here" },
     { title: "Slide 6", description: "Description text goes here" },
     { title: "Slide 7", description: "Description text goes here" },
