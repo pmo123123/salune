@@ -100,7 +100,7 @@ const About = () => {
           </div>
 
           {/* Carousel Section */}
-          <div className="max-w-2xl mx-auto mt-[150px]">
+          <div className="max-w-2xl mx-auto mt-[50px]">
             <Carousel className="w-full">
               <CarouselContent>
                 {slides.map((slide, index) => (
