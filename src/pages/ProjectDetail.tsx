@@ -25,15 +25,17 @@ const ProjectDetail = () => {
     id
   } = useParams();
   useEffect(() => {
-    // Load Elfsight Twitter Feed script once
-    const existing = document.getElementById("elfsight-platform");
-    if (!existing) {
-      const script = document.createElement("script");
-      script.id = "elfsight-platform";
-      script.src = "https://elfsightcdn.com/platform.js";
-      script.async = true;
-      document.body.appendChild(script);
-    }
+    // Load Elfsight platform script
+    const script = document.createElement("script");
+    script.src = "https://elfsightcdn.com/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      // Cleanup script on unmount
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
   }, []);
   return <div className="relative min-h-screen w-full">
       {/* Background */}
@@ -134,13 +136,8 @@ const ProjectDetail = () => {
               </div>
 
               {/* Live Feed block with Twitter Feed */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[750px] overflow-hidden">
-                <div className="w-full h-full">
-                  <div
-                    className="elfsight-app-503f2a68-e93f-4be4-aa08-f10fdbc58fde"
-                    data-elfsight-app-lazy="true"
-                  ></div>
-                </div>
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6">
+                <div className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" data-elfsight-app-lazy></div>
               </div>
             </div>
           </div>
