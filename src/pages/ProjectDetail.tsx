@@ -25,10 +25,11 @@ const ProjectDetail = () => {
     id
   } = useParams();
   useEffect(() => {
-    // Load Elfsight platform script
+    // Load Twitter widgets script
     const script = document.createElement("script");
-    script.src = "https://elfsightcdn.com/platform.js";
+    script.src = "https://platform.twitter.com/widgets.js";
     script.async = true;
+    script.charset = "utf-8";
     document.body.appendChild(script);
     return () => {
       // Cleanup script on unmount
@@ -136,8 +137,15 @@ const ProjectDetail = () => {
               </div>
 
               {/* Live Feed block with Twitter Feed */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6">
-                <div className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" data-elfsight-app-lazy></div>
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px]">
+                <a 
+                  className="twitter-timeline" 
+                  data-width="220" 
+                  data-height="700" 
+                  href="https://twitter.com/Saluneio?ref_src=twsrc%5Etfw"
+                >
+                  Tweets by Saluneio
+                </a>
               </div>
             </div>
           </div>
