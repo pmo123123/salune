@@ -25,17 +25,35 @@ const ProjectDetail = () => {
     id
   } = useParams();
   useEffect(() => {
-    // Load Twitter widgets script
-    const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
-    script.async = true;
-    script.charset = "utf-8";
-    document.body.appendChild(script);
-    return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
+    const USER_URL = "https://twitter.com/Saluneio";
+    const REFRESH_MS = 60000; // 1 minute
+
+    function loadEmbed() {
+      const container = document.getElementById("x-feed");
+      if (container) {
+        container.innerHTML = `
+          <a class="twitter-timeline"
+             data-theme="light"
+             data-chrome="noheader nofooter noborders transparent"
+             data-tweet-limit="5"
+             href="${USER_URL}">
+            Tweets by @Saluneio
+          </a>
+        `;
+        // Load/reload widget script
+        const script = document.createElement("script");
+        script.async = true;
+        script.src = "https://platform.twitter.com/widgets.js";
+        script.charset = "utf-8";
+        document.body.appendChild(script);
       }
+    }
+
+    loadEmbed();
+    const interval = setInterval(loadEmbed, REFRESH_MS);
+
+    return () => {
+      clearInterval(interval);
     };
   }, []);
   return <div className="relative min-h-screen w-full">
@@ -138,9 +156,13 @@ const ProjectDetail = () => {
 
               {/* Live Feed block with Twitter Feed */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[750px] overflow-hidden">
-                <a className="twitter-timeline" href="https://twitter.com/Saluneio">
-                  Tweets by @Saluneio
-                </a>
+                <div className="flex items-center justify-between mb-3">
+                  <div className="text-xl font-bold">Latest from @Saluneio</div>
+                  <div className="text-xs font-mono bg-muted border border-border px-3 py-1 rounded-full text-muted-foreground">
+                    Auto-refreshing
+                  </div>
+                </div>
+                <div id="x-feed"></div>
               </div>
             </div>
           </div>
