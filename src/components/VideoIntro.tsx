@@ -55,7 +55,7 @@ export const VideoIntro = ({ onVideoEnd }: VideoIntroProps) => {
         <div style={{ padding: "56.25% 0 0 0", position: "relative", width: "100%", height: "100%" }}>
           <iframe
             id="vimeo-intro"
-            src="https://player.vimeo.com/video/1132113017?badge=0&autoplay=1&autopause=0&muted=0&controls=0&title=0&byline=0&portrait=0&player_id=0&app_id=58479"
+            src="https://player.vimeo.com/video/1132113017?badge=0&autoplay=1&autopause=0&muted=0&controls=1&title=0&byline=0&portrait=0&player_id=0&app_id=58479"
             frameBorder="0"
             allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
             referrerPolicy="strict-origin-when-cross-origin"
