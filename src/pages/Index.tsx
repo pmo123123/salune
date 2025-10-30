@@ -7,6 +7,9 @@ import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneLogoWhite from "@/assets/salune-logo-white.png";
 import sheriffStar from "@/assets/sheriff-star.png";
+import deputyBadge from "@/assets/deputy-badge.jpg";
+import newspaperStack from "@/assets/newspaper-stack.jpg";
+import saluneMockup from "@/assets/salune-mockup.jpg";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const Index = () => {
@@ -38,10 +41,10 @@ const Index = () => {
 
   // Placeholder project data
   const projects = [
-    { id: 1, title: "Salune", date: "10 Oct 2025", code: "SuPp...yZ01", category: "spacial" },
-    { id: 2, title: "Bloom Grocer", date: "10 Oct 2025", code: "SuPp...yZ01", category: "narrative" },
-    { id: 3, title: "Moby : Porcelain", date: "10 Oct 2025", code: "SuPp...yZ01", category: "body" },
-    { id: 4, title: "Maxcos Jeans SS26", date: "10 Oct 2025", code: "SuPp...yZ01", category: "participatory" },
+    { id: 1, title: "Salune", date: "10 Oct 2025", code: "SuPp...yZ01", category: "spacial", image: sheriffStar },
+    { id: 2, title: "Bloom Grocer", date: "10 Oct 2025", code: "SuPp...yZ01", category: "narrative", image: deputyBadge },
+    { id: 3, title: "Moby : Porcelain", date: "10 Oct 2025", code: "SuPp...yZ01", category: "body", image: newspaperStack },
+    { id: 4, title: "Maxcos Jeans SS26", date: "10 Oct 2025", code: "SuPp...yZ01", category: "participatory", image: saluneMockup },
   ];
 
   return (
@@ -156,7 +159,7 @@ const Index = () => {
                           </Link>
                           <Link to={`/project/${project.id}`} className="block">
                             <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center">
-                              <img src={sheriffStar} alt={project.title} className="w-1/2 h-auto object-contain" />
+                              <img src={project.image} alt={project.title} className="w-1/2 h-auto object-contain" />
                             </div>
                           </Link>
                           <div className="flex justify-between text-sm text-black">
