@@ -137,7 +137,7 @@ const ProjectDetail = () => {
 
               {/* Live Feed block with Twitter Feed */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6">
-                <div className="elfsight-app-736bc0a5-4387-4ac0-b143-3461856170a4" data-elfsight-app-lazy></div>
+                <div className="elfsight-app-e665a315-1418-40dd-8f3e-b85d500362f0" data-elfsight-app-lazy></div>
               </div>
             </div>
           </div>
