@@ -49,10 +49,13 @@ const ProjectDetail = () => {
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Header */}
         {/* Header overlay - absolute, doesn't affect layout */}
-        <div className="absolute top-8 left-4 md:top-12 md:left-12 z-20">
+        <div className="absolute top-8 left-4 md:top-12 md:left-12 z-20 flex items-center gap-4">
           <Link to="/#gallery-section" className="text-black hover:opacity-70 transition-opacity flex items-center gap-2">
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium">Gallery</span>
+          </Link>
+          <Link to="/about" className="text-black hover:opacity-70 transition-opacity">
+            <span className="text-sm font-medium">About</span>
           </Link>
         </div>
         <div className="absolute top-8 right-4 md:top-12 md:right-12 z-20">
