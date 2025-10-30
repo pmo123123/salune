@@ -26,7 +26,16 @@ const About = () => {
 
 ★ Turns markets into mediums, and speculation into structure.`
     },
-    { title: "Tools of the Trade", description: "Description text goes here" },
+    { 
+      title: "Tools of the Trade", 
+      description: `★ Verified mints tied to creative production updates.
+
+★ Open ledger for progress tracking.
+
+★ Royalties loop back to creators & angel investors via treasury
+
+★ Culture financing culture.`
+    },
     { title: "Slide 4", description: "Description text goes here" },
     { title: "Slide 5", description: "Description text goes here" },
     { title: "Slide 6", description: "Description text goes here" },
