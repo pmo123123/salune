@@ -110,7 +110,7 @@ const Index = () => {
         <div className="relative min-h-screen px-4 py-8 md:py-12">
           {/* Background continuation from hero */}
           <div 
-            className="fixed inset-0 bg-cover bg-center -z-10"
+            className="absolute inset-0 bg-cover bg-center -z-10"
             style={{
               backgroundImage: `url(${heroBackground})`,
             }}
