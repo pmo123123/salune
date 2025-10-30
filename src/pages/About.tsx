@@ -5,6 +5,17 @@ import saluneLogo from "@/assets/salune-logo.png";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const About = () => {
+  const slides = [
+    { title: "The Dust Don't Settle Here", description: "Description text goes here" },
+    { title: "Slide 2", description: "Description text goes here" },
+    { title: "Slide 3", description: "Description text goes here" },
+    { title: "Slide 4", description: "Description text goes here" },
+    { title: "Slide 5", description: "Description text goes here" },
+    { title: "Slide 6", description: "Description text goes here" },
+    { title: "Slide 7", description: "Description text goes here" },
+    { title: "Slide 8", description: "Description text goes here" },
+  ];
+
   return (
     <div className="min-h-screen relative">
       {/* Background Image */}
@@ -50,7 +61,7 @@ const About = () => {
           <div className="max-w-2xl mx-auto mt-[150px]">
             <Carousel className="w-full">
               <CarouselContent>
-                {Array.from({ length: 8 }).map((_, index) => (
+                {slides.map((slide, index) => (
                   <CarouselItem key={index}>
                     <div className="p-4">
                       <div className="space-y-4">
@@ -60,8 +71,8 @@ const About = () => {
                         </div>
                         {/* Text Space */}
                         <div className="text-center space-y-2">
-                          <h3 className="text-lg font-semibold text-foreground">Slide {index + 1}</h3>
-                          <p className="text-sm text-muted-foreground">Description text goes here</p>
+                          <h3 className="text-lg font-semibold text-foreground">{slide.title}</h3>
+                          <p className="text-sm text-muted-foreground">{slide.description}</p>
                         </div>
                       </div>
                     </div>
