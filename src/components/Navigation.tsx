@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 const Navigation = () => {
   return <nav className="flex items-center justify-center gap-6 text-foreground">
-      <a href="#about" className="text-sm md:text-base font-medium tracking-wider hover:opacity-70 transition-opacity">
+      <Link to="/about" className="text-sm md:text-base font-medium tracking-wider hover:opacity-70 transition-opacity">
         ABOUT
-      </a>
+      </Link>
       <span className="text-sm md:text-base">/</span>
       
       
