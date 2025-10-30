@@ -137,15 +137,16 @@ const ProjectDetail = () => {
               </div>
 
               {/* Live Feed block with Twitter Feed */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px]">
-                <a 
-                  className="twitter-timeline" 
-                  data-width="220" 
-                  data-height="700" 
-                  href="https://twitter.com/Saluneio?ref_src=twsrc%5Etfw"
-                >
-                  Tweets by Saluneio
-                </a>
+              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[750px] overflow-hidden">
+                <div className="w-full h-full flex items-center justify-center">
+                  <a 
+                    className="twitter-timeline" 
+                    data-height="650" 
+                    href="https://twitter.com/Saluneio?ref_src=twsrc%5Etfw"
+                  >
+                    Tweets by Saluneio
+                  </a>
+                </div>
               </div>
             </div>
           </div>
