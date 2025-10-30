@@ -127,8 +127,8 @@ const About = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="top-[calc(50%-25px)]" />
-              <CarouselNext className="top-[calc(50%-25px)]" />
+              <CarouselPrevious className="top-[calc(50%-50px)]" />
+              <CarouselNext className="top-[calc(50%-50px)]" />
             </Carousel>
           </div>
         </div>
