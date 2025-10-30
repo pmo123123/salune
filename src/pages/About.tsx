@@ -6,7 +6,16 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const About = () => {
   const slides = [
-    { title: "The Dust Don't Settle Here", description: "Description text goes here" },
+    { 
+      title: "The Dust Don't Settle Here", 
+      description: `★ Speculation moves fast, but it doesn't build roots.
+
+★ Billions flow daily through Solana. Cultural producers see none of it.
+
+★ We've got attention, not alignment.
+
+★ In New York, hype burns bright and dies by morning.`
+    },
     { title: "Slide 2", description: "Description text goes here" },
     { title: "Slide 3", description: "Description text goes here" },
     { title: "Slide 4", description: "Description text goes here" },
@@ -72,7 +81,7 @@ const About = () => {
                         {/* Text Space */}
                         <div className="text-center space-y-2">
                           <h3 className="text-lg font-semibold text-foreground">{slide.title}</h3>
-                          <p className="text-sm text-muted-foreground">{slide.description}</p>
+                          <p className="text-sm text-muted-foreground whitespace-pre-line">{slide.description}</p>
                         </div>
                       </div>
                     </div>
