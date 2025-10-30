@@ -47,11 +47,11 @@ const About = () => {
           </div>
 
           {/* Carousel Section */}
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <Carousel className="w-full">
               <CarouselContent>
                 {Array.from({ length: 8 }).map((_, index) => (
-                  <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                  <CarouselItem key={index}>
                     <div className="p-4">
                       <div className="space-y-4">
                         {/* Image Placeholder */}
