@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
+import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import heroBackground from "@/assets/hero-background.jpg";
@@ -114,6 +115,11 @@ const Index = () => {
           </div>
 
           <div id="gallery-section" className="relative z-10 max-w-[1400px] mx-auto">
+            {/* Search button - Top Left */}
+            <div className="fixed top-8 left-8 md:top-12 md:left-12 z-50">
+              <SearchBar />
+            </div>
+
             {/* Back to top button */}
             <button
               onClick={() => setShowGallery(false)}
