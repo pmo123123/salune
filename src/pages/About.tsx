@@ -57,9 +57,9 @@ const About = () => {
 
 ★ Value circulates =/= not extracted.`
     },
-    { title: "Slide 6", description: "Description text goes here" },
-    { title: "Slide 7", description: "Description text goes here" },
-    { title: "Slide 8", description: "Description text goes here" },
+    { title: "First Tracks", description: "Description text goes here", image: undefined },
+    { title: "From the Ground Up", description: "Description text goes here", image: undefined },
+    { title: "The New Frontier", description: "Description text goes here", image: undefined },
   ];
 
   return (
