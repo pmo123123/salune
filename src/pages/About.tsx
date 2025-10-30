@@ -8,6 +8,7 @@ import saluneSlide3 from "@/assets/salune-slide-3.png";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
 import saluneSlide7 from "@/assets/salune-slide-7.png";
 import timesSquare from "@/assets/times-square.jpg";
+import cowboyHorse from "@/assets/cowboy-horse.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const About = () => {
@@ -89,7 +90,7 @@ const About = () => {
 ★Public infrastructure with a pulse.
 
 𓃗 Come ride with us 𓃗`,
-      image: undefined 
+      image: cowboyHorse 
     },
   ];
 
