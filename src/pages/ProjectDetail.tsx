@@ -19,6 +19,7 @@ import saluneTeal from "@/assets/salune-teal.png";
 import saluneMagenta from "@/assets/salune-magenta.png";
 import saluneMockup from "@/assets/salune-mockup.png";
 import saluneBadge from "@/assets/salune-badge.png";
+import galleryLastImage from "@/assets/gallery-last-image.jpg";
 const ProjectDetail = () => {
   const {
     id
@@ -116,6 +117,11 @@ const ProjectDetail = () => {
                     <CarouselItem>
                       <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
                         <img src={saluneMockup} alt="Salune Mockup" className="w-full h-full object-cover" />
+                      </div>
+                    </CarouselItem>
+                    <CarouselItem>
+                      <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
+                        <img src={galleryLastImage} alt="Gallery Image" className="w-full h-full object-cover" />
                       </div>
                     </CarouselItem>
                   </CarouselContent>
