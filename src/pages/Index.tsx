@@ -142,7 +142,7 @@ const Index = () => {
                 ))}
               </TabsList>
 
-              <div className="bg-white/95 border border-black/20 rounded-tr-lg rounded-b-lg p-8 md:p-12">
+              <div className="bg-white/70 border border-black/20 rounded-tr-lg rounded-b-lg p-8 md:p-12">
                 {categories.map((category) => (
                   <TabsContent key={category.id} value={category.id} className="mt-0">
                     {/* Two Column Grid */}
