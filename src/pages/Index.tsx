@@ -36,7 +36,7 @@ const Index = () => {
 
   // Placeholder project data
   const projects = [
-    { id: 1, title: "Cafe June", date: "10 Oct 2025", code: "SuPp...yZ01", category: "spacial" },
+    { id: 1, title: "Salune", date: "10 Oct 2025", code: "SuPp...yZ01", category: "spacial" },
     { id: 2, title: "PROJECT 2", date: "10 Oct 2025", code: "SuPp...yZ01", category: "narrative" },
     { id: 3, title: "PROJECT 3", date: "10 Oct 2025", code: "SuPp...yZ01", category: "body" },
     { id: 4, title: "PROJECT 4", date: "10 Oct 2025", code: "SuPp...yZ01", category: "participatory" },
