@@ -26,16 +26,18 @@ export const VideoIntro = ({ onVideoEnd }: VideoIntroProps) => {
         // Get video duration and start fade 2 seconds before end
         player.getDuration().then((duration: number) => {
           const fadeStartTime = duration - 2;
+          let fadeStarted = false;
           
           player.on("timeupdate", (data: any) => {
-            if (data.seconds >= fadeStartTime && isVisible) {
+            if (data.seconds >= fadeStartTime && !fadeStarted) {
+              fadeStarted = true;
               setIsVisible(false);
             }
           });
         });
         
         player.on("ended", () => {
-          setTimeout(onVideoEnd, 1000);
+          setTimeout(onVideoEnd, 2000); // Wait for full fade out
         });
       }
     };
@@ -45,10 +47,10 @@ export const VideoIntro = ({ onVideoEnd }: VideoIntroProps) => {
         document.body.removeChild(script);
       }
     };
-  }, [onVideoEnd, isVisible]);
+  }, [onVideoEnd]);
 
   return (
-    <div className={`fixed inset-0 z-[100] bg-black transition-opacity duration-1000 ease-out ${
+    <div className={`fixed inset-0 z-[100] bg-black transition-opacity duration-[2000ms] ease-out ${
       isVisible ? "opacity-100" : "opacity-0"
     }`}>
       <div className="w-full h-full flex items-center justify-center">
