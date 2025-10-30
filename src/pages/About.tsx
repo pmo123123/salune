@@ -123,20 +123,6 @@ const About = () => {
             <img src={saluneLogo} alt="Salune Logo" className="w-64 h-auto" />
           </div>
 
-          {/* Video Section */}
-          <div className="max-w-4xl mx-auto mb-12">
-            <div style={{ padding: "56.25% 0 0 0", position: "relative" }}>
-              <iframe 
-                src="https://player.vimeo.com/video/1132113017?badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1" 
-                frameBorder="0" 
-                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" 
-                referrerPolicy="strict-origin-when-cross-origin" 
-                style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} 
-                title="Salune Promo"
-              />
-            </div>
-          </div>
-
           {/* Carousel Section */}
           <div className="max-w-2xl mx-auto mt-[150px]">
             <Carousel className="w-full">
