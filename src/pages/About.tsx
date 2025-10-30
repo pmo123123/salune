@@ -57,9 +57,35 @@ const About = () => {
 
 ★ Value circulates =/= not extracted.`
     },
-    { title: "First Tracks", description: "Description text goes here", image: undefined },
-    { title: "From the Ground Up", description: "Description text goes here", image: undefined },
-    { title: "The New Frontier", description: "Description text goes here", image: undefined },
+    { 
+      title: "First Tracks", 
+      description: `★3–4 pilot launches across design, gastronomy, media.
+
+★Street-level buzz → digital discovery.
+
+★Public mint integration by Q2 2026.`,
+      image: undefined 
+    },
+    { 
+      title: "From the Ground Up", 
+      description: `★Team experience in branding, project management, and event production
+
+★Background in crypto marketing and community building
+
+★Selune extends that backbone to a broader creative ecosystem`,
+      image: undefined 
+    },
+    { 
+      title: "The New Frontier", 
+      description: `★The era of chasing is ending -> the age of building begins.
+
+★Selune proves art and integrity can thrive in Web3.
+
+★Public infrastructure with a pulse.
+
+𓃗 Come ride with us 𓃗`,
+      image: undefined 
+    },
   ];
 
   return (
