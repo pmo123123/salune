@@ -7,7 +7,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneLogoWhite from "@/assets/salune-logo-white.png";
 import sheriffStar from "@/assets/sheriff-star.png";
-import deputyBadge from "@/assets/deputy-badge.jpg";
+import bloomGrocerBag from "@/assets/bloom-grocer-bag.jpg";
 import newspaperStack from "@/assets/newspaper-stack.jpg";
 import saluneMockup from "@/assets/salune-mockup.jpg";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -42,7 +42,7 @@ const Index = () => {
   // Placeholder project data
   const projects = [
     { id: 1, title: "Salune", date: "10 Oct 2025", code: "SuPp...yZ01", category: "spacial", image: sheriffStar },
-    { id: 2, title: "Bloom Grocer", date: "10 Oct 2025", code: "SuPp...yZ01", category: "narrative", image: deputyBadge },
+    { id: 2, title: "Bloom Grocer", date: "10 Oct 2025", code: "SuPp...yZ01", category: "narrative", image: bloomGrocerBag },
     { id: 3, title: "Moby : Porcelain", date: "10 Oct 2025", code: "SuPp...yZ01", category: "body", image: newspaperStack },
     { id: 4, title: "Maxcos Jeans SS26", date: "10 Oct 2025", code: "SuPp...yZ01", category: "participatory", image: saluneMockup },
   ];
