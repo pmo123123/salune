@@ -6,6 +6,7 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneLogoWhite from "@/assets/salune-logo-white.png";
+import sheriffStar from "@/assets/sheriff-star.png";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const Index = () => {
@@ -154,8 +155,8 @@ const Index = () => {
                             </h3>
                           </Link>
                           <Link to={`/project/${project.id}`} className="block">
-                            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer">
-                              {/* Placeholder for project image */}
+                            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center">
+                              <img src={sheriffStar} alt={project.title} className="w-1/2 h-auto object-contain" />
                             </div>
                           </Link>
                           <div className="flex justify-between text-sm text-black">
