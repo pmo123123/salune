@@ -4,7 +4,7 @@ import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneSlide1 from "@/assets/salune-slide-1.png";
 import officeWorkspace from "@/assets/office-workspace.jpg";
-import saluneSlide3 from "@/assets/salune-slide-3.png";
+import miningTools from "@/assets/mining-tools.jpg";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
 import saluneSlide7 from "@/assets/salune-slide-7.png";
 import timesSquare from "@/assets/times-square.jpg";
@@ -44,7 +44,7 @@ const About = () => {
 ★ Royalties loop back to creators & angel investors via treasury
 
 ★ Culture financing culture.`,
-      image: saluneSlide3
+      image: miningTools
     },
     { 
       title: "Where the Streets Meet the Chain", 
