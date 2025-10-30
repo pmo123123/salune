@@ -50,9 +50,9 @@ const ProjectDetail = () => {
         {/* Header */}
         {/* Header overlay - absolute, doesn't affect layout */}
         <div className="absolute top-8 left-4 md:top-12 md:left-12 z-20">
-          <Link to="/" className="text-black hover:opacity-70 transition-opacity flex items-center gap-2">
+          <Link to="/#gallery-section" className="text-black hover:opacity-70 transition-opacity flex items-center gap-2">
             <ArrowLeft className="w-5 h-5" />
-            <span className="text-sm font-medium">HOME</span>
+            <span className="text-sm font-medium">Gallery</span>
           </Link>
         </div>
         <div className="absolute top-8 right-4 md:top-12 md:right-12 z-20">
