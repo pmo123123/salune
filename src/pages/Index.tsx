@@ -42,10 +42,10 @@ const Index = () => {
 
   // Placeholder project data
   const projects = [
-    { id: 1, title: "Salune", date: "12 Sep 2025", code: "SuPp...yZ01", category: "spacial", image: sheriffStar },
-    { id: 2, title: "Bloom Grocer", date: "24 Sep 2025", code: "SuPp...yZ01", category: "narrative", image: bloomGrocerBag },
-    { id: 3, title: "Moby : Porcelain", date: "05 Oct 2025", code: "SuPp...yZ01", category: "body", image: newspaperStack },
-    { id: 4, title: "Raxcos Jeans SS26", date: "18 Oct 2025", code: "SuPp...yZ01", category: "participatory", image: saluneMockup },
+    { id: 1, title: "Salune", date: "18 Oct 2025", code: "SuPp...yZ01", category: "spacial", image: sheriffStar },
+    { id: 2, title: "Bloom Grocer", date: "05 Oct 2025", code: "SuPp...yZ01", category: "narrative", image: bloomGrocerBag },
+    { id: 3, title: "Moby : Porcelain", date: "24 Sep 2025", code: "SuPp...yZ01", category: "body", image: newspaperStack },
+    { id: 4, title: "Raxcos Jeans SS26", date: "12 Sep 2025", code: "SuPp...yZ01", category: "participatory", image: saluneMockup },
   ];
 
   return (
