@@ -116,11 +116,6 @@ const ProjectDetail = () => {
                     </CarouselItem>
                     <CarouselItem>
                       <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
-                        <img src={saluneMockup} alt="Salune Mockup" className="w-full h-full object-cover" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                      <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
                         <img src={galleryLastImage} alt="Gallery Image" className="w-full h-full object-cover" />
                       </div>
                     </CarouselItem>
