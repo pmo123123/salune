@@ -54,7 +54,7 @@ const ProjectDetail = () => {
             <ArrowLeft className="w-5 h-5" />
             <span className="text-sm font-medium">Gallery</span>
           </Link>
-          <Link to="/about" className="text-black hover:opacity-70 transition-opacity">
+          <Link to="/about" className="text-black hover:opacity-70 transition-opacity -translate-y-[5px]">
             <span className="text-sm font-medium">About</span>
           </Link>
         </div>
