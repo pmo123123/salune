@@ -52,10 +52,9 @@ const Index = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
-      {/* Video Intro - Add your video file path here */}
+      {/* Video Intro */}
       {showVideo && (
         <VideoIntro 
-          videoSrc="/path-to-your-video.mp4" 
           onVideoEnd={() => setShowVideo(false)} 
         />
       )}
