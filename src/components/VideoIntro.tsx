@@ -9,7 +9,7 @@ export const VideoIntro = ({ onVideoEnd }: VideoIntroProps) => {
 
   const handleVideoEnd = () => {
     setIsVisible(false);
-    setTimeout(onVideoEnd, 500);
+    setTimeout(onVideoEnd, 1000); // Wait for fade out animation
   };
 
   useEffect(() => {
@@ -34,7 +34,7 @@ export const VideoIntro = ({ onVideoEnd }: VideoIntroProps) => {
   if (!isVisible) return null;
 
   return (
-    <div className={`fixed inset-0 z-[100] bg-black transition-opacity duration-500 ${
+    <div className={`fixed inset-0 z-[100] bg-black transition-opacity duration-1000 ease-out ${
       isVisible ? "opacity-100" : "opacity-0"
     }`}>
       <div className="w-full h-full flex items-center justify-center">
