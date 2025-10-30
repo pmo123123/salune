@@ -4,6 +4,7 @@ import { ArrowUp } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { VideoIntro } from "@/components/VideoIntro";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneLogoWhite from "@/assets/salune-logo-white.png";
@@ -16,6 +17,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [showGallery, setShowGallery] = useState(false);
+  const [showVideo, setShowVideo] = useState(true);
   const location = useLocation();
   
   const scrollToGallery = () => {
@@ -50,6 +52,14 @@ const Index = () => {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
+      {/* Video Intro - Add your video file path here */}
+      {showVideo && (
+        <VideoIntro 
+          videoSrc="/path-to-your-video.mp4" 
+          onVideoEnd={() => setShowVideo(false)} 
+        />
+      )}
+      
       {/* Hero Section */}
       <div className={`absolute inset-0 transition-transform duration-1000 ease-in-out ${
         showGallery ? '-translate-y-full' : 'translate-y-0'
