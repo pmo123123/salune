@@ -8,7 +8,7 @@ const Navigation = () => {
       <span className="text-sm md:text-base">/</span>
       
       
-      <a href="https://x.com/Selune_io" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base font-medium tracking-wider hover:opacity-70 transition-opacity">
+      <a href="https://x.com/Salune_io" target="_blank" rel="noopener noreferrer" className="text-sm md:text-base font-medium tracking-wider hover:opacity-70 transition-opacity">
         X
       </a>
     </nav>;
