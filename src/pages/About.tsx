@@ -6,6 +6,7 @@ import saluneSlide1 from "@/assets/salune-slide-1.png";
 import officeWorkspace from "@/assets/office-workspace.jpg";
 import miningTools from "@/assets/mining-tools.jpg";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
+import powerLines from "@/assets/power-lines.jpg";
 import saluneSlide7 from "@/assets/salune-slide-7.png";
 import timesSquare from "@/assets/times-square.jpg";
 import cowboyHorse from "@/assets/cowboy-horse.jpg";
@@ -61,7 +62,8 @@ const About = () => {
 
 ★ Treasury reinvests in new projects.
 
-★ Value circulates =/= not extracted.`
+★ Value circulates =/= not extracted.`,
+      image: powerLines
     },
     { 
       title: "First Tracks", 
