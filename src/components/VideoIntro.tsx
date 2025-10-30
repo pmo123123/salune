@@ -22,16 +22,30 @@ export const VideoIntro = ({ onVideoEnd }: VideoIntroProps) => {
       const iframe = document.querySelector("#vimeo-intro") as HTMLIFrameElement;
       if (iframe && (window as any).Vimeo) {
         const player = new (window as any).Vimeo.Player(iframe);
-        player.on("ended", handleVideoEnd);
+        
+        // Get video duration and start fade 2 seconds before end
+        player.getDuration().then((duration: number) => {
+          const fadeStartTime = duration - 2;
+          
+          player.on("timeupdate", (data: any) => {
+            if (data.seconds >= fadeStartTime && isVisible) {
+              setIsVisible(false);
+            }
+          });
+        });
+        
+        player.on("ended", () => {
+          setTimeout(onVideoEnd, 1000);
+        });
       }
     };
 
     return () => {
-      document.body.removeChild(script);
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
     };
-  }, []);
-
-  if (!isVisible) return null;
+  }, [onVideoEnd, isVisible]);
 
   return (
     <div className={`fixed inset-0 z-[100] bg-black transition-opacity duration-1000 ease-out ${
