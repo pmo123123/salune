@@ -27,6 +27,7 @@ const Index = () => {
   useEffect(() => {
     if (location.hash === "#gallery-section") {
       setShowGallery(true);
+      setShowVideo(false);
       setTimeout(() => {
         document.getElementById("gallery-section")?.scrollIntoView({ behavior: "smooth" });
       }, 0);
