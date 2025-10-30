@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
+import WaitlistForm from "@/components/WaitlistForm";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneLogoWhite from "@/assets/salune-logo-white.png";
@@ -68,17 +69,22 @@ const Index = () => {
 
             {/* Centered Logo Button */}
             <div className="flex-1 flex items-center justify-center px-4">
-              <button
-                onClick={scrollToGallery}
-                className="group cursor-pointer transition-transform hover:scale-105 active:scale-95"
-                aria-label="Enter website"
-              >
-                <img 
-                  src={saluneLogo} 
-                  alt="Salune" 
-                  className="w-64 md:w-96 lg:w-[500px] h-auto"
-                />
-              </button>
+              <div className="flex flex-col items-center gap-8">
+                <button
+                  onClick={scrollToGallery}
+                  className="group cursor-pointer transition-transform hover:scale-105 active:scale-95"
+                  aria-label="Enter website"
+                >
+                  <img 
+                    src={saluneLogo} 
+                    alt="Salune" 
+                    className="w-64 md:w-96 lg:w-[500px] h-auto"
+                  />
+                </button>
+                
+                {/* Waitlist Form */}
+                <WaitlistForm />
+              </div>
             </div>
 
             {/* Navigation - Bottom */}
