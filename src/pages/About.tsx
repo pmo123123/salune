@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import Logo from "@/components/Logo";
 import Navigation from "@/components/Navigation";
 import heroBackground from "@/assets/hero-background.jpg";
+import saluneLogo from "@/assets/salune-logo.png";
 
 const About = () => {
   return (
@@ -36,7 +36,7 @@ const About = () => {
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Logo Section */}
           <div className="flex justify-center mb-12">
-            <Logo />
+            <img src={saluneLogo} alt="Salune Logo" className="w-64 h-auto" />
           </div>
 
           {/* About Content */}
