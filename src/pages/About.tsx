@@ -44,7 +44,14 @@ const About = () => {
 
 ★ Guerrilla campaigns spark curiosity and online buzz.`
     },
-    { title: "The Circular Trail", description: "Description text goes here" },
+    { 
+      title: "The Circular Trail", 
+      description: `★ Fractional fee on verified mints and liquidity routing.
+
+★ Treasury reinvests in new projects.
+
+★ Value circulates /-/ not extracted.`
+    },
     { title: "Slide 6", description: "Description text goes here" },
     { title: "Slide 7", description: "Description text goes here" },
     { title: "Slide 8", description: "Description text goes here" },
