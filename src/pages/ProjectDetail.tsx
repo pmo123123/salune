@@ -127,9 +127,9 @@ const ProjectDetail = () => {
                   Update Date: {format(new Date(), "MMMM d, yyyy 'at' h:mm a")}
                 </p>
                 <blockquote className="mt-4 border-l-4 border-black pl-4 italic text-foreground/80 text-sm leading-relaxed">
-                  "We've been building in the dark, tracing the outlines of a system that resists completion. None of us were trained to code. We enter these tools like trespassers: Figma, Lovable, Codex, Código. Each one promises structure, but the real work is mythic, taming the chaos of creation itself.
+                  The team is deep in the branding phase, refining how Salune should feel and move as both a platform and an experience. Our visual direction draws from the spirit of the frontier, warm lights, brass tones, quiet conversations blended with the sleek infrastructure of Solana's digital landscape. The goal is to create a space that feels alive, communal, and slightly cinematic, where design isn't just aesthetic but atmospheric. Salune's identity sits between a Western bar and a blockchain terminal: a place where stories, ideas, and tokens all trade hands across the counter.
                   <br /><br />
-                  There's tension in it, the kind that lives between order and collapse. Every line of code is a negotiation between impulse and restraint. We fail, we rebuild, we learn the machine's moods."
+                  The name Salune itself is a fusion, part saloon, part Solana, part lunar. A saloon was always a gathering point, a crossroads of travelers and tales, and we wanted our site to feel the same way: a menu of choices, each project like a drink you can order, each interaction part of the story. It's a place to pause, participate, and connect where the old rituals of community meet the new architecture of Web3.
                 </blockquote>
               </div>
 
