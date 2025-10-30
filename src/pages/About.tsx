@@ -47,7 +47,7 @@ const About = () => {
           </div>
 
           {/* Carousel Section */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-2xl mx-auto">
             <Carousel className="w-full">
               <CarouselContent>
                 {Array.from({ length: 8 }).map((_, index) => (
@@ -55,7 +55,7 @@ const About = () => {
                     <div className="p-4">
                       <div className="space-y-4">
                         {/* Image Placeholder */}
-                        <div className="aspect-[4/3] bg-muted rounded-lg border-2 border-border flex items-center justify-center">
+                        <div className="aspect-square max-w-md mx-auto bg-muted rounded-lg border-2 border-border flex items-center justify-center">
                           <span className="text-muted-foreground">Image {index + 1}</span>
                         </div>
                         {/* Text Space */}
