@@ -83,7 +83,9 @@ const Index = () => {
                 </button>
                 
                 {/* Waitlist Form */}
-                <WaitlistForm />
+                <div className="-mt-[50px]">
+                  <WaitlistForm />
+                </div>
               </div>
             </div>
 
