@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ArrowUp } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
@@ -17,6 +17,7 @@ const Index = () => {
   const [activeCategory, setActiveCategory] = useState("all");
   const [showGallery, setShowGallery] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   
   const scrollToGallery = () => {
     setShowGallery(true);
@@ -67,6 +68,15 @@ const Index = () => {
 
           {/* Content */}
           <div className="relative z-10 flex flex-col min-h-screen">
+            {/* Up arrow to home page */}
+            <button
+              onClick={() => navigate('/')}
+              className="fixed top-8 right-8 md:top-12 md:right-12 z-50 bg-white/80 hover:bg-white border border-black/20 rounded-full p-3 transition-all hover:scale-110 active:scale-95 shadow-lg"
+              aria-label="Go to home page"
+            >
+              <ArrowUp className="w-5 h-5 text-black" />
+            </button>
+
             {/* Centered Logo Button */}
             <div className="flex-1 flex items-center justify-center px-4">
               <div className="flex flex-col items-center gap-4">
