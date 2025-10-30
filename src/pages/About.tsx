@@ -2,12 +2,21 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import Logo from "@/components/Logo";
 import Navigation from "@/components/Navigation";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen relative">
+      {/* Background Image */}
+      <div 
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBackground})` }}
+      />
+      
+      {/* Overlay */}
+      <div className="fixed inset-0 z-0 bg-background/90 backdrop-blur-sm" />
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border relative">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link 
@@ -23,7 +32,7 @@ const About = () => {
       </header>
 
       {/* Main Content */}
-      <main className="pt-24 pb-16">
+      <main className="pt-24 pb-16 relative z-10">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Logo Section */}
           <div className="flex justify-center mb-12">
