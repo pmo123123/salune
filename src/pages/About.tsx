@@ -143,7 +143,7 @@ const About = () => {
                         {/* Image */}
                         <div className="aspect-square max-w-md mx-auto rounded-lg border-2 border-border overflow-hidden">
                           {slide.image ? (
-                            <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+                            <img src={slide.image} alt={slide.title} className="w-full h-full object-cover object-center" />
                           ) : (
                             <div className="w-full h-full bg-muted flex items-center justify-center">
                               <span className="text-muted-foreground">Image {index + 1}</span>
