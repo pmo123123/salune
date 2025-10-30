@@ -7,6 +7,7 @@ import saluneSlide2 from "@/assets/salune-slide-2.png";
 import saluneSlide3 from "@/assets/salune-slide-3.png";
 import saluneSlide4 from "@/assets/salune-slide-4.png";
 import saluneSlide7 from "@/assets/salune-slide-7.png";
+import timesSquare from "@/assets/times-square.jpg";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const About = () => {
@@ -68,7 +69,7 @@ const About = () => {
 ★Street-level buzz → digital discovery.
 
 ★Public mint integration by Q2 2026.`,
-      image: undefined 
+      image: timesSquare 
     },
     { 
       title: "From the Ground Up", 
