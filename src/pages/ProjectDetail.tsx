@@ -138,7 +138,9 @@ const ProjectDetail = () => {
 
               {/* Live Feed block with Twitter Feed */}
               <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[750px] overflow-hidden">
-                <a className="twitter-timeline" href="https://twitter.com/Saluneio?ref_src=twsrc%5Etfw">Tweets by Saluneio</a>
+                <a className="twitter-timeline" href="https://twitter.com/Saluneio">
+                  Tweets by @Saluneio
+                </a>
               </div>
             </div>
           </div>
