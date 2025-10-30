@@ -26,7 +26,7 @@ const About = () => {
 
 ★ Turns markets into mediums, and speculation into structure.`
     },
-    { title: "Slide 3", description: "Description text goes here" },
+    { title: "Tools of the Trade", description: "Description text goes here" },
     { title: "Slide 4", description: "Description text goes here" },
     { title: "Slide 5", description: "Description text goes here" },
     { title: "Slide 6", description: "Description text goes here" },
