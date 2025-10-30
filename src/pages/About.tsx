@@ -142,9 +142,9 @@ const About = () => {
                           )}
                         </div>
                         {/* Text Space */}
-                        <div className="space-y-2">
-                          <h3 className="text-lg font-semibold text-foreground text-center">{slide.title}</h3>
-                          <p className="text-sm text-foreground whitespace-pre-line text-left ml-[85px]">{slide.description}</p>
+                        <div className="text-center space-y-2">
+                          <h3 className="text-lg font-semibold text-foreground">{slide.title}</h3>
+                          <p className="text-sm text-foreground whitespace-pre-line">{slide.description}</p>
                         </div>
                       </div>
                     </div>
