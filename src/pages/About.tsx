@@ -12,18 +12,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 
 const About = () => {
   const slides = [
-    { 
-      title: "Tools of the Trade", 
-      description: `★ Verified mints tied to creative production updates.
-
-★ Open ledger for progress tracking.
-
-★ Royalties loop back to creators & angel investors via treasury
-
-★ Culture financing culture.`,
-      image: miningTools
-    },
-    { 
+    {
       title: "Where the Streets Meet the Chain", 
       description: `★ For cultural producers and crypto patrons alike.
 
