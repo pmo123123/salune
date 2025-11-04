@@ -115,7 +115,7 @@ const ProjectDetail = () => {
                   <CarouselItem>
                     <div className="p-1">
                       <div className="rounded-lg bg-card h-[700px] flex items-start justify-start p-8">
-                        <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden">
+                        <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
                           <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
                         </div>
                       </div>
