@@ -147,7 +147,7 @@ const Index = () => {
                         <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                       </div>
                     </Link>
-                    <div className="flex justify-center gap-8 text-sm text-black px-8">
+                    <div className="flex justify-between text-sm text-black px-4">
                       <span>{project.date}</span>
                       <span>{project.code}</span>
                     </div>
