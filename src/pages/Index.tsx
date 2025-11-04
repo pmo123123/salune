@@ -11,10 +11,9 @@ import sheriffStar from "@/assets/sheriff-star.png";
 import bloomGrocerBag from "@/assets/bloom-grocer-bag.png";
 import newspaperStack from "@/assets/newspaper-stack.png";
 import saluneMockup from "@/assets/salune-mockup.png";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+
 
 const Index = () => {
-  const [activeCategory, setActiveCategory] = useState("all");
   const [showGallery, setShowGallery] = useState(false);
   const location = useLocation();
   
@@ -30,15 +29,6 @@ const Index = () => {
       }, 0);
     }
   }, [location.hash]);
-
-  const categories = [
-    { id: "all", label: "ALL" },
-    { id: "spacial", label: "SPACIAL" },
-    { id: "narrative", label: "NARRATIVE" },
-    { id: "body", label: "BODY" },
-    { id: "participatory", label: "PARTICIPATORY" },
-    { id: "machine", label: "MACHINE" },
-  ];
 
   // Placeholder project data
   const projects = [
@@ -138,51 +128,32 @@ const Index = () => {
               />
             </div>
 
-            {/* Category Tabs - Manila folder style */}
-            <Tabs value={activeCategory} onValueChange={setActiveCategory} className="w-full">
-              <TabsList className="w-full grid grid-cols-3 md:grid-cols-6 gap-1 bg-transparent h-auto p-0 mb-0">
-                {categories.map((category) => (
-                  <TabsTrigger
-                    key={category.id}
-                    value={category.id}
-                    className="data-[state=active]:bg-white data-[state=inactive]:bg-white/70 border-t border-l border-r border-black/20 rounded-t-xl rounded-b-none text-black font-medium py-4 px-4 hover:bg-white transition-all data-[state=active]:border-b-0 data-[state=inactive]:border-b"
+            {/* Projects Grid */}
+            <div className="bg-white/70 border border-black/20 rounded-lg p-8 md:p-12 mt-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
+                {projects.map((project, idx) => (
+                  <div 
+                    key={project.id} 
+                    className={`space-y-4 py-8 ${idx > 1 ? 'border-t border-black/10' : ''}`}
                   >
-                    {category.label}
-                  </TabsTrigger>
-                ))}
-              </TabsList>
-
-              <div className="bg-white/70 border border-black/20 rounded-tr-lg rounded-b-lg p-8 md:p-12">
-                {categories.map((category) => (
-                  <TabsContent key={category.id} value={category.id} className="mt-0">
-                    {/* Two Column Grid */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12">
-                      {projects.map((project, idx) => (
-                        <div 
-                          key={project.id} 
-                          className={`space-y-4 py-8 ${idx > 1 ? 'border-t border-black/10' : ''}`}
-                        >
-                          <Link to={`/project/${project.id}`}>
-                            <h3 className="text-xl font-bold text-black text-center hover:opacity-70 transition-opacity cursor-pointer">
-                              {project.title}
-                            </h3>
-                          </Link>
-                          <Link to={`/project/${project.id}`} className="block">
-                            <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center border-2 border-black/20">
-                              <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
-                            </div>
-                          </Link>
-                          <div className="flex justify-between text-sm text-black">
-                            <span>{project.date}</span>
-                            <span>{project.code}</span>
-                          </div>
-                        </div>
-                      ))}
+                    <Link to={`/project/${project.id}`}>
+                      <h3 className="text-xl font-bold text-black text-center hover:opacity-70 transition-opacity cursor-pointer">
+                        {project.title}
+                      </h3>
+                    </Link>
+                    <Link to={`/project/${project.id}`} className="block">
+                      <div className="aspect-[4/3] bg-gray-300 rounded-lg overflow-hidden hover:opacity-90 transition-opacity cursor-pointer flex items-center justify-center border-2 border-black/20">
+                        <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
+                      </div>
+                    </Link>
+                    <div className="flex justify-between text-sm text-black">
+                      <span>{project.date}</span>
+                      <span>{project.code}</span>
                     </div>
-                  </TabsContent>
+                  </div>
                 ))}
               </div>
-            </Tabs>
+            </div>
           </div>
         </div>
       </div>
