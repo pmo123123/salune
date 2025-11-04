@@ -130,7 +130,7 @@ const Index = () => {
             </div>
 
             {/* Projects Grid */}
-            <div className="bg-white/70 border border-black/20 rounded-lg p-6 md:p-8 -mt-[75px] mx-6">
+            <div className="bg-white/70 border border-black/20 rounded-lg p-6 md:p-8 -mt-[75px] mx-12 md:mx-16">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
                 {projects.map((project, idx) => (
                   <div 
