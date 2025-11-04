@@ -75,13 +75,6 @@ const ProjectDetail = () => {
               <img src={saluneLogo} alt="Salune" className="w-64 md:w-96 lg:w-[500px] h-auto" />
             </Link>
 
-            {/* Sheriff Star - centered above chart */}
-            <div className="flex justify-center mb-6">
-              <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
-                <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
-              </div>
-            </div>
-
             {/* GeckoTerminal Embed */}
             <div className="w-full h-[500px] mb-8 rounded-lg overflow-hidden -mt-[50px]">
               <iframe
@@ -121,8 +114,11 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center p-8">
-                        <h2 className="text-[36px] font-bold text-foreground">
+                      <div className="rounded-lg bg-card h-[700px] flex items-start justify-start p-8 gap-8">
+                        <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
+                          <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
+                        </div>
+                        <h2 className="text-[36px] font-bold text-foreground mt-[50px]">
                           Salune Arrives in New York City
                         </h2>
                       </div>
