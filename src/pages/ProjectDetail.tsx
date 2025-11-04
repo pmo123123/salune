@@ -187,7 +187,7 @@ const ProjectDetail = () => {
                     <div className="p-1">
                       <div className="rounded-lg h-[700px] flex flex-col items-start justify-start p-12 overflow-y-auto relative">
                         <span className="absolute top-12 left-12 text-xs text-foreground/60">15 Nov 2025</span>
-                        <h2 className="text-[36px] font-bold text-foreground mb-8">Timeline</h2>
+                        <h2 className="text-[36px] font-bold text-foreground mb-8 mt-8">Timeline</h2>
                         
                         <div className="space-y-6 text-foreground/90">
                           <div>
