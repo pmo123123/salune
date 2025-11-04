@@ -112,13 +112,13 @@ const ProjectDetail = () => {
 
             {/* Carousel Section */}
             <div className="w-full mb-4">
+              <span className="text-xs text-foreground/60 pl-12 block mb-2">24 Oct 2025</span>
               <Carousel className="w-full">
                 <CarouselContent>
-                  <CarouselItem>
-                    <div className="p-1">
-                       <div className="rounded-lg h-[700px] flex items-start justify-start p-12 gap-6 relative">
-                         <span className="absolute top-12 left-12 text-xs text-foreground/60">24 Oct 2025</span>
-                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30 mt-8">
+                   <CarouselItem>
+                     <div className="p-1">
+                       <div className="rounded-lg h-[700px] flex items-start justify-start p-12 gap-6">
+                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
                             <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
                           </div>
                           <div className="flex flex-col -mt-[25px] max-w-3xl">
