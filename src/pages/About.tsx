@@ -2,64 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
-import miningTools from "@/assets/mining-tools.jpg";
-import saluneSlide4 from "@/assets/salune-slide-4.png";
-import wheatField from "@/assets/wheat-field.jpg";
-import saluneSlide7 from "@/assets/salune-slide-7.png";
-import timesSquare from "@/assets/times-square.jpg";
-import cowboyHorse from "@/assets/cowboy-horse.jpg";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const About = () => {
-  const slides = [
-    {
-      title: "Where the Streets Meet the Chain", 
-      description: `★ For cultural producers and crypto patrons alike.
-
-★ Launching from New York City = the world's creative testbed.
-
-★ Guerrilla campaigns spark curiosity and online buzz.`,
-      image: saluneSlide4
-    },
-    { 
-      title: "The Circular Trail", 
-      description: `★ Fractional fee on verified mints and liquidity routing.
-
-★ Treasury reinvests in new projects.
-
-★ Value circulates =/= not extracted.`,
-      image: wheatField
-    },
-    { 
-      title: "First Tracks", 
-      description: `★3–4 pilot launches across design, gastronomy, media.
-
-★Street-level buzz → digital discovery.
-
-★Public mint integration by Q2 2026.`,
-      image: timesSquare 
-    },
-    { 
-      title: "From the Ground Up", 
-      description: `★Team experience in branding, project management, and event production
-
-★Background in crypto marketing and community building
-
-★Selune extends that backbone to a broader creative ecosystem`,
-      image: saluneSlide7 
-    },
-    { 
-      title: "The New Frontier", 
-      description: `★The era of chasing is ending -> the age of building begins.
-
-★Selune proves art and integrity can thrive in Web3.
-
-★Public infrastructure with a pulse.
-
-𓃗 Come ride with us 𓃗`,
-      image: cowboyHorse 
-    },
-  ];
 
   return (
     <div className="min-h-screen relative">
@@ -84,41 +28,8 @@ const About = () => {
       <main className="pt-24 pb-16 relative z-10">
         <div className="container mx-auto px-4 max-w-4xl">
           {/* Logo Section */}
-          <div className="flex justify-center mb-12" style={{ marginTop: "-120px" }}>
-            <img src={saluneLogo} alt="Salune Logo" className="w-64 h-auto" />
-          </div>
-
-          {/* Carousel Section */}
-          <div className="max-w-2xl mx-auto mt-[-30px]">
-            <Carousel className="w-full">
-              <CarouselContent>
-                {slides.map((slide, index) => (
-                  <CarouselItem key={index}>
-                    <div className="p-4">
-                      <div className="space-y-4">
-                        {/* Image */}
-                        <div className="aspect-square max-w-md mx-auto rounded-lg border-2 border-border overflow-hidden">
-                          {slide.image ? (
-                            <img src={slide.image} alt={slide.title} className="w-full h-full object-cover object-center" />
-                          ) : (
-                            <div className="w-full h-full bg-muted flex items-center justify-center">
-                              <span className="text-muted-foreground">Image {index + 1}</span>
-                            </div>
-                          )}
-                        </div>
-                        {/* Text Space */}
-                        <div className="text-center space-y-2">
-                          <h3 className="text-lg font-semibold text-foreground">{slide.title}</h3>
-                          <p className="text-sm text-foreground whitespace-pre-line">{slide.description}</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious className="top-[calc(50%-50px)]" />
-              <CarouselNext className="top-[calc(50%-50px)]" />
-            </Carousel>
+          <div className="flex justify-center" style={{ marginTop: "-120px" }}>
+            <img src={saluneLogo} alt="Salune Logo" className="w-64 md:w-96 lg:w-[500px] h-auto" />
           </div>
         </div>
       </main>
