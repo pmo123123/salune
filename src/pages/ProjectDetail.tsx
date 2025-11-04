@@ -76,7 +76,7 @@ const ProjectDetail = () => {
             </Link>
 
             {/* GeckoTerminal Embed */}
-            <div className="w-full h-[500px] mb-8 rounded-lg overflow-hidden">
+            <div className="w-full h-[500px] mb-8 rounded-lg overflow-hidden -mt-[50px]">
               <iframe
                 id="geckoterminal-embed"
                 title="GeckoTerminal Embed"
