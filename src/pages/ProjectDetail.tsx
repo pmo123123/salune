@@ -113,9 +113,25 @@ const ProjectDetail = () => {
                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
                           <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
                         </div>
-                        <h2 className="text-[36px] font-bold text-foreground mt-[50px]">
-                          Salune Arrives in New York City
-                        </h2>
+                        <div className="flex flex-col mt-[50px] max-w-3xl">
+                          <h2 className="text-[36px] font-bold text-foreground mb-6">
+                            Salune Arrives in New York City
+                          </h2>
+                          <div className="space-y-4 text-foreground/90 leading-relaxed">
+                            <p>
+                              Salune is a new kind of platform where culture, creativity, and blockchain innovation meet under one roof. Inspired by the idea of a saloon for the digital frontier, it's a place where creators, patrons, and explorers gather to exchange ideas, stories, and value. Each project on Salune functions like an item on a menu, an offering of vision and craft, served with transparency and intent.
+                            </p>
+                            <p>
+                              Built on Solana's high-speed infrastructure, Salune transforms the energy of the internet into something human again: collaboration, experimentation, and storytelling. Rooted in cypherpunk values, it champions autonomy, transparency, and the right to build outside institutions, proving that code can protect creativity as much as it powers it. It's designed not just as a platform, but as an atmosphere. A space that invites participation and curiosity. Here, technology doesn't replace creativity; it amplifies it.
+                            </p>
+                            <p>
+                              Salune represents a new chapter for the web, where design meets decentralization, and where each interaction helps shape the culture of tomorrow. Step inside, explore the menu, and find your place at the counter of this evolving frontier.
+                            </p>
+                            <p className="text-sm italic mt-6">
+                              Contributors: Project Manager: Paige Oosterom | Branding: Lisa Lagova
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </CarouselItem>
