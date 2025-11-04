@@ -106,7 +106,7 @@ const ProjectDetail = () => {
             </div>
 
             {/* Carousel Section */}
-            <div className="w-full mb-8">
+            <div className="w-full mb-4">
               <Carousel className="w-full">
                 <CarouselContent>
                   <CarouselItem>
@@ -151,7 +151,7 @@ const ProjectDetail = () => {
             </div>
 
             {/* Second Carousel Section */}
-            <h2 className="text-[36px] font-bold text-foreground mb-6">Salune Exclusives:</h2>
+            <h2 className="text-[36px] font-bold text-foreground mb-4">Salune Exclusives:</h2>
             <div className="w-full mb-8">
               <Carousel className="w-full">
                 <CarouselContent>
