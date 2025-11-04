@@ -14,6 +14,7 @@ import saluneMagenta from "@/assets/salune-magenta.png";
 import saluneMockup from "@/assets/salune-mockup.png";
 import saluneBadge from "@/assets/salune-badge.png";
 import galleryLastImage from "@/assets/gallery-last-image.jpg";
+import sheriffStar from "@/assets/sheriff-star.png";
 
 // Declare Solana wallet type
 declare global {
@@ -114,8 +115,8 @@ const ProjectDetail = () => {
                   <CarouselItem>
                     <div className="p-1">
                       <div className="rounded-lg bg-card h-[700px] flex items-start justify-start p-8">
-                        <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center text-muted-foreground">
-                          Image Placeholder
+                        <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden">
+                          <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
                         </div>
                       </div>
                     </div>
