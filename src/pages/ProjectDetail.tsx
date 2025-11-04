@@ -64,6 +64,19 @@ const ProjectDetail = () => {
               <img src={saluneLogo} alt="Salune" className="w-64 md:w-96 lg:w-[500px] h-auto" />
             </Link>
 
+            {/* GeckoTerminal Embed */}
+            <div className="w-full h-[500px] mb-8 rounded-lg overflow-hidden">
+              <iframe
+                id="geckoterminal-embed"
+                title="GeckoTerminal Embed"
+                src="https://www.geckoterminal.com/solana/pools/So11111111111111111111111111111111111111112?embed=1&info=0&swaps=0&light_chart=1&chart_type=market_cap&resolution=1d&bg_color=f1f5f9"
+                frameBorder="0"
+                allow="clipboard-write"
+                allowFullScreen
+                style={{ width: '100%', height: '100%' }}
+              />
+            </div>
+
             {/* Grid Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {/* Project Info block */}
