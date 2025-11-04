@@ -1,8 +1,23 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { useEffect } from "react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 const About = () => {
+  useEffect(() => {
+    // Load Vimeo Player API
+    const script = document.createElement('script');
+    script.src = 'https://player.vimeo.com/api/player.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      if (document.body.contains(script)) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return <div className="min-h-screen relative">
       {/* Background Image */}
       <div className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{
@@ -27,15 +42,35 @@ const About = () => {
           </div>
 
           {/* Vimeo Video */}
-          <div className="w-full max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden -mt-[75px]">
+          <div className="w-full max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden -mt-[75px] relative group">
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <iframe
-                src="https://player.vimeo.com/video/1132113017?badge=0&autopause=0&player_id=0&app_id=58479"
+                id="vimeo-player"
+                src="https://player.vimeo.com/video/1132113017?autoplay=1&muted=1&loop=1&background=0&controls=0&title=0&byline=0&portrait=0"
                 frameBorder="0"
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
                 className="absolute top-0 left-0 w-full h-full"
                 title="Salune Video"
               />
+              <button
+                id="sound-toggle"
+                onClick={() => {
+                  const iframe = document.getElementById('vimeo-player') as HTMLIFrameElement;
+                  const player = new (window as any).Vimeo.Player(iframe);
+                  player.getVolume().then((volume: number) => {
+                    const newVolume = volume === 0 ? 1 : 0;
+                    player.setVolume(newVolume);
+                    const btn = document.getElementById('sound-toggle');
+                    if (btn) {
+                      btn.textContent = newVolume === 0 ? '🔇' : '🔊';
+                    }
+                  });
+                }}
+                className="absolute bottom-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl transition-all z-10 opacity-0 group-hover:opacity-100"
+                aria-label="Toggle sound"
+              >
+                🔇
+              </button>
             </div>
           </div>
 
