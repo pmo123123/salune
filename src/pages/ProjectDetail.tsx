@@ -159,7 +159,7 @@ const ProjectDetail = () => {
                     <div className="p-1">
                       <div className="rounded-lg bg-card h-[700px] flex flex-col items-center justify-start p-8 gap-6">
                         {/* Images */}
-                        <div className="flex gap-6 items-center">
+                        <div className="flex gap-6 items-center mt-[25px]">
                           <img src={saluneMagentaHalftone} alt="Salune Magenta" className="w-[400px] h-auto rounded-lg" />
                           <img src={saluneTealHalftone} alt="Salune Teal" className="w-[400px] h-auto rounded-lg" />
                         </div>
