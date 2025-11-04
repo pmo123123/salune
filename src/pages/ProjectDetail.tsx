@@ -20,11 +20,14 @@ import sheriffStar from "@/assets/sheriff-star.png";
 declare global {
   interface Window {
     solana?: {
-      connect: () => Promise<{ publicKey: { toString: () => string } }>;
+      connect: () => Promise<{
+        publicKey: {
+          toString: () => string;
+        };
+      }>;
     };
   }
 }
-
 const ProjectDetail = () => {
   const {
     id
@@ -77,33 +80,25 @@ const ProjectDetail = () => {
 
             {/* GeckoTerminal Embed */}
             <div className="w-full h-[500px] mb-8 rounded-lg overflow-hidden -mt-[50px]">
-              <iframe
-                id="geckoterminal-embed"
-                title="GeckoTerminal Embed"
-                src="https://www.geckoterminal.com/solana/pools/So11111111111111111111111111111111111111112?embed=1&info=0&swaps=0&light_chart=1&chart_type=market_cap&resolution=1d&bg_color=f1f5f9"
-                frameBorder="0"
-                allow="clipboard-write"
-                allowFullScreen
-                style={{ width: '100%', height: '100%' }}
-              />
+              <iframe id="geckoterminal-embed" title="GeckoTerminal Embed" src="https://www.geckoterminal.com/solana/pools/So11111111111111111111111111111111111111112?embed=1&info=0&swaps=0&light_chart=1&chart_type=market_cap&resolution=1d&bg_color=f1f5f9" frameBorder="0" allow="clipboard-write" allowFullScreen style={{
+              width: '100%',
+              height: '100%'
+            }} />
             </div>
 
             {/* Wallet Connector */}
             <div className="mb-8 flex justify-start">
-              <button 
-                onClick={() => {
-                  if (window.solana) {
-                    window.solana.connect().then((response: any) => {
-                      console.log('Connected:', response.publicKey.toString());
-                    }).catch((err: any) => {
-                      console.error('Connection failed:', err);
-                    });
-                  } else {
-                    alert('Please install Phantom wallet');
-                  }
-                }}
-                className="px-3 py-1.5 bg-white text-black rounded-md hover:bg-white/90 transition-colors text-sm font-medium border border-border"
-              >
+              <button onClick={() => {
+              if (window.solana) {
+                window.solana.connect().then((response: any) => {
+                  console.log('Connected:', response.publicKey.toString());
+                }).catch((err: any) => {
+                  console.error('Connection failed:', err);
+                });
+              } else {
+                alert('Please install Phantom wallet');
+              }
+            }} className="px-3 py-1.5 bg-white text-black rounded-md hover:bg-white/90 transition-colors text-sm font-medium border border-border">
                 Connect Wallet
               </button>
             </div>
@@ -138,7 +133,7 @@ const ProjectDetail = () => {
             </div>
 
             {/* Second Carousel Section */}
-            <h2 className="text-[36px] font-bold text-foreground mb-6">From the Outpost</h2>
+            <h2 className="text-[36px] font-bold text-foreground mb-6">Salune Exclusives:</h2>
             <div className="w-full mb-8">
               <Carousel className="w-full">
                 <CarouselContent>
