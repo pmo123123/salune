@@ -172,8 +172,31 @@ const ProjectDetail = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
-                        {/* Slide 2 content */}
+                      <div className="rounded-lg bg-card h-[700px] flex flex-col items-start justify-start p-8 overflow-y-auto">
+                        <h2 className="text-[36px] font-bold text-foreground mb-8">Timeline</h2>
+                        
+                        <div className="space-y-6 text-foreground/90">
+                          <div>
+                            <h3 className="text-[24px] font-bold text-foreground mb-3">Q4 2025 — Product Development</h3>
+                            <p className="leading-relaxed">
+                              The foundation of Salune comes to life. Website architecture, token mechanics, and user flow are built to reflect the platform's ethos: fluid, elegant, and transparent. The design direction draws inspiration from the world of glossy magazines: visually rich, editorial in tone, and built for deep scrolling rather than quick clicks. Each project reads like a feature story, a blend of imagery, text, and process, inviting visitors to slow down and engage. The development phase focuses on making blockchain interactions feel intuitive, almost invisible, so that creators experience the technology as atmosphere, not obstacle. Design meets utility: each project page functions as both a creative portfolio and a living ledger of process.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h3 className="text-[24px] font-bold text-foreground mb-3">Q4 2025 / Q1 2026 — Talent Scouting</h3>
+                            <p className="leading-relaxed">
+                              Salune begins curating its first circle of creators, innovators whose work blurs the boundaries between craft and concept. The goal isn't mass adoption, but quality of participation. Every contributor invited to the platform shares Salune's values of experimentation, transparency, and creative integrity. This early cohort helps test and shape the platform's tools while building a community that feels less like a marketplace and more like a movement.
+                            </p>
+                          </div>
+
+                          <div>
+                            <h3 className="text-[24px] font-bold text-foreground mb-3">Q2 2026 — First Mint Initiated</h3>
+                            <p className="leading-relaxed">
+                              The first project mint marks Salune's official debut. Rather than a finished artwork, it begins at the earliest stage of production, the initial sketch, the recipe draft, the storyboard pinned to the wall. From that moment on, the project unfolds in public view, with every step recorded on-chain. This inaugural mint serves as a proof of concept for Salune's vision: that process, not product, is where cultural value is born.
+                            </p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </CarouselItem>
