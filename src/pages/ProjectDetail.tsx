@@ -117,11 +117,11 @@ const ProjectDetail = () => {
                 <CarouselContent>
                    <CarouselItem>
                      <div className="p-1">
-                       <div className="rounded-lg h-[700px] flex items-start justify-start p-12 gap-6">
-                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
+                       <div className="rounded-lg h-[700px] flex flex-col md:flex-row items-start justify-start p-12 gap-6">
+                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden mx-auto md:mx-0">
                             <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
                           </div>
-                          <div className="flex flex-col -mt-[25px] max-w-3xl">
+                          <div className="flex flex-col -mt-[25px] md:mt-0 max-w-3xl">
                             <h2 className="text-[36px] font-bold text-foreground mb-4 mt-[25px]">
                               Salune Arrives in New York City
                             </h2>
