@@ -65,10 +65,13 @@ const ProjectDetail = () => {
             <ArrowLeft className="w-5 h-5 text-black" />
           </Link>
         </div>
-        <div className="absolute top-[40px] left-[100px] md:top-[56px] md:left-[116px] z-20">
+        <div className="absolute top-[40px] left-[100px] md:top-[56px] md:left-[116px] z-20 flex items-center gap-4">
           <Link to="/about" className="text-black hover:opacity-70 transition-opacity text-sm font-medium" aria-label="About">
             ABOUT
           </Link>
+          <a href="https://x.com/Salune_io" target="_blank" rel="noopener noreferrer" className="text-black hover:opacity-70 transition-opacity text-sm font-medium" aria-label="X (Twitter)">
+            X
+          </a>
         </div>
         <div className="absolute top-8 right-4 md:top-12 md:right-12 z-20">
           <SearchBar />
