@@ -101,7 +101,7 @@ const ProjectDetail = () => {
                     alert('Please install Phantom wallet');
                   }
                 }}
-                className="px-6 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium"
+                className="px-3 py-1.5 bg-white text-black rounded-md hover:bg-white/90 transition-colors text-sm font-medium border border-border"
               >
                 Connect Wallet
               </button>
