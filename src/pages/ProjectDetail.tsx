@@ -15,6 +15,8 @@ import saluneMockup from "@/assets/salune-mockup.png";
 import saluneBadge from "@/assets/salune-badge.png";
 import galleryLastImage from "@/assets/gallery-last-image.jpg";
 import sheriffStar from "@/assets/sheriff-star.png";
+import saluneMagentaHalftone from "@/assets/salune-magenta-halftone.png";
+import saluneTealHalftone from "@/assets/salune-teal-halftone.png";
 
 // Declare Solana wallet type
 declare global {
@@ -155,8 +157,16 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
-                        {/* Slide 1 content */}
+                      <div className="rounded-lg bg-card h-[700px] flex flex-col items-center justify-start p-8 gap-6">
+                        {/* Images */}
+                        <div className="flex gap-6 items-center">
+                          <img src={saluneMagentaHalftone} alt="Salune Magenta" className="w-[400px] h-auto rounded-lg" />
+                          <img src={saluneTealHalftone} alt="Salune Teal" className="w-[400px] h-auto rounded-lg" />
+                        </div>
+                        {/* Space for text */}
+                        <div className="flex-1 w-full max-w-4xl">
+                          {/* Text content can be added here */}
+                        </div>
                       </div>
                     </div>
                   </CarouselItem>
