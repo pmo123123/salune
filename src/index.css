@@ -8,6 +8,14 @@ All colors MUST be HSL.
 
 @font-face {
   font-family: 'Alte Haas Grotesk';
+  src: url('./assets/fonts/haas.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Alte Haas Grotesk';
   src: url('./assets/fonts/AlteHaasGroteskBold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
@@ -99,10 +107,11 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-grotesk;
   }
 
-  h1, h2, h3, h4, h5, h6, .font-bold, strong, b {
-    @apply font-grotesk;
+  h1, h2, h3, h4, h5, h6, strong, b {
+    font-family: 'Alte Haas Grotesk', sans-serif;
+    font-weight: 700;
   }
 }
