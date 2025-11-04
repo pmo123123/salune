@@ -70,7 +70,7 @@ const About = () => {
             </section>
 
             <section className="space-y-4">
-              <h2 className="text-xl md:text-2xl font-semibold">Salune adopts this infrastructural mindset and applies it to the scale of individual creators.</h2>
+              <h2 className="text-xl md:text-2xl font-semibold">Salune adopts this infrastructural mindset and applies it to the scale of individual producers.</h2>
               <p className="text-base md:text-lg leading-relaxed">
                 Each project it hosts is a micro-ecosystem: part creative production, part public ledger, part participatory economy. The people who follow and support a project are not passive audiences; they are stakeholders in its development. Every creative act is treated as a line in a larger civic ledger, an entry in the city's ongoing archive of production.
               </p>
