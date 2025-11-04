@@ -114,4 +114,8 @@ All colors MUST be HSL.
     font-family: 'Alte Haas Grotesk', sans-serif;
     font-weight: 700;
   }
+
+  p {
+    text-align: justify;
+  }
 }
