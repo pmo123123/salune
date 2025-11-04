@@ -83,8 +83,10 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
-                        {/* Slide 1 content */}
+                      <div className="rounded-lg bg-card h-[700px] flex items-start justify-start p-8">
+                        <div className="w-48 h-48 bg-muted rounded-lg flex items-center justify-center text-muted-foreground">
+                          Image Placeholder
+                        </div>
                       </div>
                     </div>
                   </CarouselItem>
