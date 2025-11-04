@@ -65,9 +65,9 @@ const ProjectDetail = () => {
             <ArrowLeft className="w-5 h-5 text-black" />
           </Link>
         </div>
-        <div className="absolute top-8 left-20 md:left-24 z-20">
-          <Link to="/about" className="bg-white/80 hover:bg-white border border-black/20 rounded-full p-3 transition-all hover:scale-110 active:scale-95 shadow-lg inline-flex items-center justify-center text-black text-sm font-medium px-4" aria-label="About">
-            About
+        <div className="absolute top-8 left-20 md:top-12 md:left-24 z-20">
+          <Link to="/about" className="text-black hover:opacity-70 transition-opacity text-sm font-medium" aria-label="About">
+            ABOUT
           </Link>
         </div>
         <div className="absolute top-8 right-4 md:top-12 md:right-12 z-20">
