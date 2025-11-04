@@ -62,7 +62,7 @@ const Index = () => {
               backgroundImage: `url(${heroBackground})`,
             }}
           >
-            <div className="absolute inset-0 bg-background/30 backdrop-blur-sm" />
+            <div className="absolute inset-0 bg-background/30 backdrop-blur-3xl" />
           </div>
 
           {/* Content */}
@@ -111,7 +111,7 @@ const Index = () => {
               backgroundImage: `url(${heroBackground})`,
             }}
           >
-            <div className="absolute inset-0 bg-background/50 backdrop-blur-3xl" />
+            <div className="absolute inset-0 bg-background/60 backdrop-blur-[40px]" />
           </div>
 
           <div id="gallery-section" className="relative z-10 max-w-[1400px] mx-auto">

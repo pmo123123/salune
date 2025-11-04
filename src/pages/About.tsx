@@ -70,7 +70,7 @@ const About = () => {
       />
       
       {/* Overlay */}
-      <div className="fixed inset-0 z-0 bg-background/30 backdrop-blur-sm" />
+      <div className="fixed inset-0 z-0 bg-background/50 backdrop-blur-3xl" />
       {/* Back Button */}
       <Link 
         to="/" 

@@ -42,7 +42,7 @@ const ProjectDetail = () => {
       <div className="fixed inset-0 bg-cover bg-center" style={{
       backgroundImage: `url(${heroBackground})`
     }}>
-        <div className="absolute inset-0 bg-background/50 backdrop-blur-3xl" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-[40px]" />
       </div>
 
       {/* Content */}
