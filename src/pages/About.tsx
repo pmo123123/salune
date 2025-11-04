@@ -126,7 +126,7 @@ const About = () => {
 
           {/* Title */}
           <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12 mt-[25px]">
-            Salune: Infrastructure for the Age of Infinite Creation
+            Salune: The New Frontier of Creative Infrastructure
           </h1>
 
           {/* Text Content */}
