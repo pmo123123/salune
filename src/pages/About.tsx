@@ -1,22 +1,78 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
+
+// Declare Vimeo Player type
+declare global {
+  interface Window {
+    Vimeo?: {
+      Player: any;
+    };
+  }
+}
+
 const About = () => {
+  const playerRef = useRef<any>(null);
+  const iframeRef = useRef<HTMLIFrameElement>(null);
+
   useEffect(() => {
     // Load Vimeo Player API
     const script = document.createElement('script');
     script.src = 'https://player.vimeo.com/api/player.js';
     script.async = true;
+    
+    script.onload = () => {
+      if (iframeRef.current && window.Vimeo) {
+        playerRef.current = new window.Vimeo.Player(iframeRef.current);
+      }
+    };
+    
     document.body.appendChild(script);
 
     return () => {
       if (document.body.contains(script)) {
         document.body.removeChild(script);
       }
+      playerRef.current = null;
     };
   }, []);
+
+  const handleVideoClick = async () => {
+    if (!playerRef.current) return;
+    
+    try {
+      const paused = await playerRef.current.getPaused();
+      if (paused) {
+        await playerRef.current.play();
+      } else {
+        await playerRef.current.pause();
+      }
+    } catch (error) {
+      console.error('Error toggling video:', error);
+    }
+  };
+
+  const handleSoundToggle = async (e: React.MouseEvent) => {
+    e.stopPropagation();
+    if (!playerRef.current) return;
+    
+    try {
+      const volume = await playerRef.current.getVolume();
+      const newVolume = volume === 0 ? 1 : 0;
+      await playerRef.current.setVolume(newVolume);
+      
+      const btn = document.getElementById('sound-toggle');
+      if (btn) {
+        btn.innerHTML = newVolume === 0 
+          ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>' 
+          : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
+      }
+    } catch (error) {
+      console.error('Error toggling sound:', error);
+    }
+  };
 
   return <div className="min-h-screen relative">
       {/* Background Image */}
@@ -43,20 +99,13 @@ const About = () => {
 
           {/* Vimeo Video */}
           <div className="w-full max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden -mt-[75px] relative group">
-            <div className="relative w-full cursor-pointer" style={{ paddingBottom: "56.25%" }}
-              onClick={() => {
-                const iframe = document.getElementById('vimeo-player') as HTMLIFrameElement;
-                const player = new (window as any).Vimeo.Player(iframe);
-                player.getPaused().then((paused: boolean) => {
-                  if (paused) {
-                    player.play();
-                  } else {
-                    player.pause();
-                  }
-                });
-              }}
+            <div 
+              className="relative w-full cursor-pointer" 
+              style={{ paddingBottom: "56.25%" }}
+              onClick={handleVideoClick}
             >
               <iframe
+                ref={iframeRef}
                 id="vimeo-player"
                 src="https://player.vimeo.com/video/1132113017?autoplay=1&muted=1&loop=1&background=0&controls=0&title=0&byline=0&portrait=0"
                 frameBorder="0"
@@ -66,19 +115,7 @@ const About = () => {
               />
               <button
                 id="sound-toggle"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  const iframe = document.getElementById('vimeo-player') as HTMLIFrameElement;
-                  const player = new (window as any).Vimeo.Player(iframe);
-                  player.getVolume().then((volume: number) => {
-                    const newVolume = volume === 0 ? 1 : 0;
-                    player.setVolume(newVolume);
-                    const btn = document.getElementById('sound-toggle');
-                    if (btn) {
-                      btn.innerHTML = newVolume === 0 ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
-                    }
-                  });
-                }}
+                onClick={handleSoundToggle}
                 className="absolute bottom-3 right-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-md w-8 h-8 flex items-center justify-center transition-all z-10 opacity-0 group-hover:opacity-100 border border-white/20"
                 aria-label="Toggle sound"
               >
