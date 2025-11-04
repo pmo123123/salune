@@ -109,15 +109,15 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex items-start justify-start p-8 gap-8">
+                      <div className="rounded-lg bg-card h-[700px] flex items-start justify-start p-6 gap-6">
                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
                           <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex flex-col mt-[50px] max-w-3xl">
-                          <h2 className="text-[36px] font-bold text-foreground mb-6">
+                          <h2 className="text-[36px] font-bold text-foreground mb-4">
                             Salune Arrives in New York City
                           </h2>
-                          <div className="space-y-4 text-foreground/90 leading-relaxed">
+                          <div className="space-y-3 text-foreground/90 leading-relaxed">
                             <p>
                               Salune is a new kind of platform where culture, creativity, and blockchain innovation meet under one roof. Inspired by the idea of a saloon for the digital frontier, it's a place where creators, patrons, and explorers gather to exchange ideas, stories, and value. Each project on Salune functions like an item on a menu, an offering of vision and craft, served with transparency and intent.
                             </p>
