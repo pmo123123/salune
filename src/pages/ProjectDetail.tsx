@@ -14,6 +14,16 @@ import saluneMagenta from "@/assets/salune-magenta.png";
 import saluneMockup from "@/assets/salune-mockup.png";
 import saluneBadge from "@/assets/salune-badge.png";
 import galleryLastImage from "@/assets/gallery-last-image.jpg";
+
+// Declare Solana wallet type
+declare global {
+  interface Window {
+    solana?: {
+      connect: () => Promise<{ publicKey: { toString: () => string } }>;
+    };
+  }
+}
+
 const ProjectDetail = () => {
   const {
     id
@@ -75,6 +85,26 @@ const ProjectDetail = () => {
                 allowFullScreen
                 style={{ width: '100%', height: '100%' }}
               />
+            </div>
+
+            {/* Wallet Connector */}
+            <div className="mb-8 flex justify-start">
+              <button 
+                onClick={() => {
+                  if (window.solana) {
+                    window.solana.connect().then((response: any) => {
+                      console.log('Connected:', response.publicKey.toString());
+                    }).catch((err: any) => {
+                      console.error('Connection failed:', err);
+                    });
+                  } else {
+                    alert('Please install Phantom wallet');
+                  }
+                }}
+                className="px-6 py-3 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors font-medium"
+              >
+                Connect Wallet
+              </button>
             </div>
 
             {/* Carousel Section */}
