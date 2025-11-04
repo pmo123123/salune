@@ -26,6 +26,19 @@ const About = () => {
             <img src={saluneLogo} alt="Salune Logo" className="w-64 md:w-96 lg:w-[500px] h-auto" />
           </div>
 
+          {/* Vimeo Video */}
+          <div className="w-full max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden">
+            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+              <iframe
+                src="https://player.vimeo.com/video/1132113017?badge=0&autopause=0&player_id=0&app_id=58479"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                className="absolute top-0 left-0 w-full h-full"
+                title="Salune Video"
+              />
+            </div>
+          </div>
+
           {/* Title */}
           <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12 -mt-[50px]">
             Salune: Infrastructure for the Age of Infinite Creation
