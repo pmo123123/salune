@@ -5,6 +5,7 @@ import { format } from "date-fns";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import SolanaTokenChart from "@/components/SolanaTokenChart";
+import Footer from "@/components/Footer";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
@@ -240,6 +241,9 @@ const ProjectDetail = () => {
         {/* Navigation - Bottom */}
         
       </div>
+
+      {/* Footer */}
+      <Footer />
     </div>;
 };
 export default ProjectDetail;

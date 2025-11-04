@@ -3,6 +3,7 @@ import { ArrowLeft } from "lucide-react";
 import { useEffect, useRef } from "react";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
+import Footer from "@/components/Footer";
 
 // Declare Vimeo Player type
 declare global {
@@ -194,6 +195,7 @@ const About = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>;
 };
 export default About;

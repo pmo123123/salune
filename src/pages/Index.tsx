@@ -4,6 +4,7 @@ import { ArrowUp } from "lucide-react";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import Footer from "@/components/Footer";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import saluneLogoWhite from "@/assets/salune-logo-white.png";
@@ -157,6 +158,7 @@ const Index = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
