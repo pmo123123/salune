@@ -240,10 +240,9 @@ const ProjectDetail = () => {
 
         {/* Navigation - Bottom */}
         
+        {/* Footer */}
+        <Footer />
       </div>
-
-      {/* Footer */}
-      <Footer />
     </div>;
 };
 export default ProjectDetail;
