@@ -116,15 +116,15 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg h-[700px] flex items-start justify-start p-12 gap-6 relative">
-                        <span className="absolute top-12 left-12 text-xs text-foreground/60">24 Oct 2025</span>
-                        <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
-                          <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
-                        </div>
-                        <div className="flex flex-col -mt-[25px] max-w-3xl">
-                          <h2 className="text-[36px] font-bold text-foreground mb-4 mt-[25px]">
-                            Salune Arrives in New York City
-                          </h2>
+                       <div className="rounded-lg h-[700px] flex items-start justify-start p-12 gap-6 relative">
+                         <span className="absolute top-12 left-12 text-xs text-foreground/60">24 Oct 2025</span>
+                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30 mt-8">
+                            <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
+                          </div>
+                          <div className="flex flex-col -mt-[25px] max-w-3xl">
+                            <h2 className="text-[36px] font-bold text-foreground mb-4 mt-[25px]">
+                              Salune Arrives in New York City
+                            </h2>
                           <div className="space-y-3 text-foreground/90 leading-relaxed">
                             <p>
                               Salune is a new kind of platform where culture, creativity, and blockchain innovation meet under one roof. Inspired by the idea of a saloon for the digital frontier, it's a place where creators, patrons, and explorers gather to exchange ideas, stories, and value. Each project on Salune functions like an item on a menu, an offering of vision and craft, served with transparency and intent.
@@ -137,12 +137,12 @@ const ProjectDetail = () => {
                             </p>
                             <p className="text-sm italic mt-6">
                               Contributors: Project Manager: Paige Oosterom | Branding: Lisa Lagova
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
+                             </p>
+                           </div>
+                         </div>
+                       </div>
+                     </div>
+                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
                       <div className="rounded-lg h-[700px] flex items-center justify-center p-12">
