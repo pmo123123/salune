@@ -164,7 +164,7 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg h-[700px] flex flex-col items-center justify-start p-12 gap-6 relative">
+                      <div className="rounded-lg h-[500px] flex flex-col items-center justify-start p-12 gap-6 relative">
                         <span className="absolute top-12 left-12 text-xs text-foreground/60">24 Oct 2025</span>
                         {/* Images */}
                         <div className="flex gap-6 items-center mt-[25px]">
@@ -185,7 +185,7 @@ const ProjectDetail = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg h-[700px] flex flex-col items-start justify-start p-12 overflow-y-auto relative">
+                      <div className="rounded-lg h-[500px] flex flex-col items-start justify-start p-12 overflow-y-auto relative">
                         <span className="absolute top-12 left-12 text-xs text-foreground/60">15 Nov 2025</span>
                         <h2 className="text-[36px] font-bold text-foreground mb-8 mt-8">Timeline</h2>
                         
@@ -216,7 +216,7 @@ const ProjectDetail = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg h-[700px] flex items-center justify-center relative p-12">
+                      <div className="rounded-lg h-[500px] flex items-center justify-center relative p-12">
                         <span className="absolute top-12 left-12 text-xs text-foreground/60">Coming Soon</span>
                         {/* Slide 3 content */}
                       </div>
