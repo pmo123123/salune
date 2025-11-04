@@ -111,7 +111,7 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex items-start justify-start p-12 gap-6">
+                      <div className="rounded-lg h-[700px] flex items-start justify-start p-12 gap-6">
                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
                           <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
                         </div>
@@ -139,7 +139,7 @@ const ProjectDetail = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center p-12">
+                      <div className="rounded-lg h-[700px] flex items-center justify-center p-12">
                         <div className="elfsight-app-e665a315-1418-40dd-8f3e-b85d500362f0" data-elfsight-app-lazy></div>
                       </div>
                     </div>
@@ -157,7 +157,7 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex flex-col items-center justify-start p-12 gap-6">
+                      <div className="rounded-lg h-[700px] flex flex-col items-center justify-start p-12 gap-6">
                         {/* Images */}
                         <div className="flex gap-6 items-center mt-[25px]">
                           <img src={saluneMagentaHalftone} alt="Salune Magenta" className="w-[400px] h-auto rounded-lg" />
@@ -177,7 +177,7 @@ const ProjectDetail = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex flex-col items-start justify-start p-12 overflow-y-auto">
+                      <div className="rounded-lg h-[700px] flex flex-col items-start justify-start p-12 overflow-y-auto">
                         <h2 className="text-[36px] font-bold text-foreground mb-8">Timeline</h2>
                         
                         <div className="space-y-6 text-foreground/90">
@@ -207,7 +207,7 @@ const ProjectDetail = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
+                      <div className="rounded-lg h-[700px] flex items-center justify-center">
                         {/* Slide 3 content */}
                       </div>
                     </div>
