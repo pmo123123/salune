@@ -164,7 +164,8 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg h-[700px] flex flex-col items-center justify-start p-12 gap-6">
+                      <div className="rounded-lg h-[700px] flex flex-col items-center justify-start p-12 gap-6 relative">
+                        <span className="absolute top-4 left-4 text-xs text-foreground/60">24 Oct 2025</span>
                         {/* Images */}
                         <div className="flex gap-6 items-center mt-[25px]">
                           <img src={saluneMagentaHalftone} alt="Salune Magenta" className="w-[400px] h-auto rounded-lg" />
@@ -184,7 +185,8 @@ const ProjectDetail = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg h-[700px] flex flex-col items-start justify-start p-12 overflow-y-auto">
+                      <div className="rounded-lg h-[700px] flex flex-col items-start justify-start p-12 overflow-y-auto relative">
+                        <span className="absolute top-4 left-4 text-xs text-foreground/60">15 Nov 2025</span>
                         <h2 className="text-[36px] font-bold text-foreground mb-8">Timeline</h2>
                         
                         <div className="space-y-6 text-foreground/90">
@@ -214,7 +216,8 @@ const ProjectDetail = () => {
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg h-[700px] flex items-center justify-center">
+                      <div className="rounded-lg h-[700px] flex items-center justify-center relative">
+                        <span className="absolute top-4 left-4 text-xs text-foreground/60">Coming Soon</span>
                         {/* Slide 3 content */}
                       </div>
                     </div>
