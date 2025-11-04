@@ -83,34 +83,22 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg overflow-hidden bg-card">
-                        <img 
-                          src={saluneTeal} 
-                          alt="Salune Teal" 
-                          className="w-full h-[400px] object-cover"
-                        />
+                      <div className="rounded-lg bg-card h-[600px] flex items-center justify-center">
+                        {/* Slide 1 content */}
                       </div>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg overflow-hidden bg-card">
-                        <img 
-                          src={saluneMagenta} 
-                          alt="Salune Magenta" 
-                          className="w-full h-[400px] object-cover"
-                        />
+                      <div className="rounded-lg bg-card h-[600px] flex items-center justify-center">
+                        {/* Slide 2 content */}
                       </div>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg overflow-hidden bg-card">
-                        <img 
-                          src={saluneMockup} 
-                          alt="Salune Mockup" 
-                          className="w-full h-[400px] object-cover"
-                        />
+                      <div className="rounded-lg bg-card h-[600px] flex items-center justify-center">
+                        {/* Slide 3 content */}
                       </div>
                     </div>
                   </CarouselItem>
