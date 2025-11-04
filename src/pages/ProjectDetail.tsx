@@ -154,7 +154,7 @@ const ProjectDetail = () => {
             <div className="pl-12">
               <h2 className="text-[36px] font-bold text-foreground mb-4 -mt-[75px]">Salune Exclusives:</h2>
             </div>
-            <div className="w-full mb-8">
+            <div className="w-full mb-8 -mt-[25px]">
               <Carousel className="w-full">
                 <CarouselContent>
                   <CarouselItem>
