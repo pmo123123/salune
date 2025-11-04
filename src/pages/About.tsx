@@ -27,7 +27,7 @@ const About = () => {
           </div>
 
           {/* Vimeo Video */}
-          <div className="w-full max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden">
+          <div className="w-full max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden -mt-[75px]">
             <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
               <iframe
                 src="https://player.vimeo.com/video/1132113017?badge=0&autopause=0&player_id=0&app_id=58479"
