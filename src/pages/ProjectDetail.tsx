@@ -145,7 +145,7 @@ const ProjectDetail = () => {
                   <CarouselItem>
                     <div className="p-1">
                       <div className="rounded-lg h-[700px] flex items-center justify-center p-12">
-                        <div className="elfsight-app-e665a315-1418-40dd-8f3e-b85d500362f0" data-elfsight-app-lazy></div>
+                        <div className="elfsight-app-e665a315-1418-40dd-8f3e-b85d500362f0 -mt-[25px]" data-elfsight-app-lazy></div>
                       </div>
                     </div>
                   </CarouselItem>
