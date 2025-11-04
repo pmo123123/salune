@@ -168,9 +168,9 @@ const ProjectDetail = () => {
                       <div className="rounded-lg min-h-[400px] flex flex-col items-center justify-start p-12 gap-6 relative">
                         <span className="absolute top-12 left-12 text-xs text-foreground/60">24 Oct 2025</span>
                         {/* Images */}
-                        <div className="flex gap-6 items-center mt-[25px]">
-                          <img src={saluneMagentaHalftone} alt="Salune Magenta" className="w-[400px] h-auto rounded-lg" />
-                          <img src={saluneTealHalftone} alt="Salune Teal" className="w-[400px] h-auto rounded-lg" />
+                        <div className="flex flex-col md:flex-row gap-6 items-center mt-[25px]">
+                          <img src={saluneMagentaHalftone} alt="Salune Magenta" className="w-full md:w-[400px] h-auto rounded-lg" />
+                          <img src={saluneTealHalftone} alt="Salune Teal" className="w-full md:w-[400px] h-auto rounded-lg" />
                         </div>
                         {/* Space for text */}
                         <div className="flex-1 w-full max-w-4xl space-y-4 text-foreground/90 leading-relaxed">
