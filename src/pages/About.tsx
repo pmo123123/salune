@@ -40,7 +40,7 @@ const About = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12 -mt-[50px]">
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12 mt-[25px]">
             Salune: Infrastructure for the Age of Infinite Creation
           </h1>
 
