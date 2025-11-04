@@ -5,13 +5,7 @@ import { format } from "date-fns";
 import SearchBar from "@/components/SearchBar";
 import Navigation from "@/components/Navigation";
 import SolanaTokenChart from "@/components/SolanaTokenChart";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroBackground from "@/assets/hero-background.jpg";
 import saluneLogo from "@/assets/salune-logo.png";
 import nyLovesYou from "@/assets/ny-loves-you.jpg";
@@ -73,75 +67,16 @@ const ProjectDetail = () => {
             {/* Grid Layout */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {/* Project Info block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px] flex flex-col gap-4">
-                <div className="flex gap-4">
-                  {/* Project badge/logo */}
-                  <img src={saluneBadge} alt="New York Loves You" className="w-32 h-32 rounded-lg object-cover flex-shrink-0" />
-                  
-                  {/* Title and date */}
-                  <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-foreground mb-2">Salune</h2>
-                    <p className="text-sm text-muted-foreground">Published: October 29, 2025</p>
-                  </div>
-                </div>
-                
-                {/* Description */}
-                <div className="flex-1 overflow-auto">
-                <p className="text-xs text-foreground leading-relaxed">
-                  Salune is a new kind of platform where culture, creativity, and blockchain innovation meet under one roof. Inspired by the idea of a saloon for the digital frontier, it's a place where creators, patrons, and explorers gather to exchange ideas, stories, and value. Each project on Salune functions like an item on a menu, an offering of vision and craft, served with transparency and intent.
-                  <br /><br />
-                  Built on Solana's high-speed infrastructure, Salune transforms the energy of the internet into something human again: collaboration, experimentation, and storytelling. Rooted in cypherpunk values, it champions autonomy, transparency, and the right to build outside institutions, proving that code can protect creativity as much as it powers it. It's designed not just as a platform, but as an atmosphere. A space that invites participation and curiosity. Here, technology doesn't replace creativity; it amplifies it.
-                  <br /><br />
-                  Salune represents a new chapter for the web, where design meets decentralization, and where each interaction helps shape the culture of tomorrow. Step inside, explore the menu, and find your place at the counter of this evolving frontier.
-                  <br /><br />
-                  <strong>Contributors:</strong> Project Manager: Paige Oosterom | Branding: Lisa Lagova
-                </p>
-                </div>
-              </div>
+              
 
               {/* Chart block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[700px]">
-                <SolanaTokenChart tokenMint="2gGvMK4sxcfYumUwTmre6sXWwtNPTrYaaXLVmAUeauAv" />
-              </div>
+              
 
               {/* About block */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6 h-[950px]">
-                <h3 className="text-2xl font-bold text-foreground mb-4">Salune Exclusives</h3>
-                <Carousel className="w-full h-[300px]">
-                  <CarouselContent>
-                    <CarouselItem>
-                      <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
-                        <img src={saluneTeal} alt="Salune Logo" className="w-full h-full object-cover" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                      <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
-                        <img src={saluneMagenta} alt="Salune Magenta" className="w-full h-full object-cover" />
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                      <div className="w-full h-[300px] bg-muted rounded-lg overflow-hidden">
-                        <img src={galleryLastImage} alt="Gallery Image" className="w-full h-full object-cover" />
-                      </div>
-                    </CarouselItem>
-                  </CarouselContent>
-                  <CarouselPrevious className="left-2" />
-                  <CarouselNext className="right-2" />
-                </Carousel>
-                <p className="text-sm text-muted-foreground mt-3">
-                  Update Date: {format(new Date(), "MMMM d, yyyy 'at' h:mm a")}
-                </p>
-                <blockquote className="mt-4 border-l-4 border-black pl-4 italic text-foreground/80 text-sm leading-relaxed">
-                  The team is deep in the branding phase, refining how Salune should feel and move as both a platform and an experience. Our visual direction draws from the spirit of the frontier, warm lights, brass tones, quiet conversations blended with the sleek infrastructure of Solana's digital landscape. The goal is to create a space that feels alive, communal, and slightly cinematic, where design isn't just aesthetic but atmospheric. Salune's identity sits between a Western bar and a blockchain terminal: a place where stories, ideas, and tokens all trade hands across the counter.
-                  <br /><br />
-                  The name Salune itself is a fusion, part saloon, part Solana, part lunar. A saloon was always a gathering point, a crossroads of travelers and tales, and we wanted our site to feel the same way: a menu of choices, each project like a drink you can order, each interaction part of the story. It's a place to pause, participate, and connect where the old rituals of community meet the new architecture of Web3.
-                </blockquote>
-              </div>
+              
 
               {/* Live Feed block with Twitter Feed */}
-              <div className="rounded-2xl ring-1 ring-black/10 bg-white/60 p-6">
-                <div className="elfsight-app-e665a315-1418-40dd-8f3e-b85d500362f0" data-elfsight-app-lazy></div>
-              </div>
+              
             </div>
           </div>
         </div>
