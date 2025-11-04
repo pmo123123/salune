@@ -164,8 +164,13 @@ const ProjectDetail = () => {
                           <img src={saluneTealHalftone} alt="Salune Teal" className="w-[400px] h-auto rounded-lg" />
                         </div>
                         {/* Space for text */}
-                        <div className="flex-1 w-full max-w-4xl">
-                          {/* Text content can be added here */}
+                        <div className="flex-1 w-full max-w-4xl space-y-4 text-foreground/90 leading-relaxed">
+                          <p>
+                            The team is deep in the branding phase, refining how Salune should feel and move as both a platform and an experience. Our visual direction draws from the spirit of the frontier, warm lights, brass tones, quiet conversations blended with the sleek infrastructure of Solana's digital landscape. The goal is to create a space that feels alive, communal, and slightly cinematic, where design isn't just aesthetic but atmospheric. Salune's identity sits between a Western bar and a blockchain terminal: a place where stories, ideas, and tokens all trade hands across the counter.
+                          </p>
+                          <p>
+                            The name Salune itself is a fusion, part saloon, part Solana, part lunar. A saloon was always a gathering point, a crossroads of travelers and tales, and we wanted our site to feel the same way: a menu of choices, each project like a drink you can order, each interaction part of the story. It's a place to pause, participate, and connect where the old rituals of community meet the new architecture of Web3.
+                          </p>
                         </div>
                       </div>
                     </div>
