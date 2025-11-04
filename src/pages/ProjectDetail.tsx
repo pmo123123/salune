@@ -131,6 +131,30 @@ const ProjectDetail = () => {
                       </div>
                     </div>
                   </CarouselItem>
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
+            </div>
+
+            {/* Second Carousel Section */}
+            <div className="w-full mb-8">
+              <Carousel className="w-full">
+                <CarouselContent>
+                  <CarouselItem>
+                    <div className="p-1">
+                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
+                        {/* Slide 1 content */}
+                      </div>
+                    </div>
+                  </CarouselItem>
+                  <CarouselItem>
+                    <div className="p-1">
+                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
+                        {/* Slide 2 content */}
+                      </div>
+                    </div>
+                  </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
                       <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
