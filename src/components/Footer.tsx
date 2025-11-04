@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer className="w-full py-8 px-4 md:px-12">
+    <footer className="w-full py-8 px-4 md:px-12 mt-[25px]">
       <div className="max-w-4xl mx-auto">
         <h3 className="font-bold text-foreground mb-2" style={{ fontSize: '10px' }}>Disclaimer</h3>
         <p className="text-muted-foreground leading-relaxed" style={{ fontSize: '8pt' }}>
