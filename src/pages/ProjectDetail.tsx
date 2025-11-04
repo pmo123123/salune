@@ -157,7 +157,7 @@ const ProjectDetail = () => {
 
             {/* Second Carousel Section */}
             <div className="pl-12">
-              <h2 className="text-[36px] font-bold text-foreground mb-4 -mt-[95px]">Salune Exclusives:</h2>
+              <h2 className="text-[36px] font-bold text-foreground mb-4 -mt-[70px]">Salune Exclusives:</h2>
             </div>
             <div className="w-full mb-8 -mt-[25px]">
               <Carousel className="w-full">
