@@ -118,7 +118,7 @@ const ProjectDetail = () => {
                         <div className="w-48 h-48 rounded-lg flex items-center justify-center overflow-hidden border border-border/30">
                           <img src={sheriffStar} alt="Sheriff Star" className="w-full h-full object-contain" />
                         </div>
-                        <h2 className="text-[36px] font-bold text-foreground">
+                        <h2 className="text-[36px] font-bold text-foreground mt-[25px]">
                           Salune Arrives in New York City
                         </h2>
                       </div>
