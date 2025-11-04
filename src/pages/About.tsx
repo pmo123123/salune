@@ -43,7 +43,19 @@ const About = () => {
 
           {/* Vimeo Video */}
           <div className="w-full max-w-4xl mx-auto mb-12 rounded-lg overflow-hidden -mt-[75px] relative group">
-            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+            <div className="relative w-full cursor-pointer" style={{ paddingBottom: "56.25%" }}
+              onClick={() => {
+                const iframe = document.getElementById('vimeo-player') as HTMLIFrameElement;
+                const player = new (window as any).Vimeo.Player(iframe);
+                player.getPaused().then((paused: boolean) => {
+                  if (paused) {
+                    player.play();
+                  } else {
+                    player.pause();
+                  }
+                });
+              }}
+            >
               <iframe
                 id="vimeo-player"
                 src="https://player.vimeo.com/video/1132113017?autoplay=1&muted=1&loop=1&background=0&controls=0&title=0&byline=0&portrait=0"
@@ -54,7 +66,8 @@ const About = () => {
               />
               <button
                 id="sound-toggle"
-                onClick={() => {
+                onClick={(e) => {
+                  e.stopPropagation();
                   const iframe = document.getElementById('vimeo-player') as HTMLIFrameElement;
                   const player = new (window as any).Vimeo.Player(iframe);
                   player.getVolume().then((volume: number) => {
@@ -62,14 +75,14 @@ const About = () => {
                     player.setVolume(newVolume);
                     const btn = document.getElementById('sound-toggle');
                     if (btn) {
-                      btn.textContent = newVolume === 0 ? '🔇' : '🔊';
+                      btn.innerHTML = newVolume === 0 ? '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>' : '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path></svg>';
                     }
                   });
                 }}
-                className="absolute bottom-4 right-4 bg-black/50 hover:bg-black/70 text-white rounded-full w-12 h-12 flex items-center justify-center text-xl transition-all z-10 opacity-0 group-hover:opacity-100"
+                className="absolute bottom-3 right-3 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white rounded-md w-8 h-8 flex items-center justify-center transition-all z-10 opacity-0 group-hover:opacity-100 border border-white/20"
                 aria-label="Toggle sound"
               >
-                🔇
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon><line x1="23" y1="9" x2="17" y2="15"></line><line x1="17" y1="9" x2="23" y2="15"></line></svg>
               </button>
             </div>
           </div>
