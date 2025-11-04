@@ -83,21 +83,21 @@ const ProjectDetail = () => {
                 <CarouselContent>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[600px] flex items-center justify-center">
+                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
                         {/* Slide 1 content */}
                       </div>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[600px] flex items-center justify-center">
+                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
                         {/* Slide 2 content */}
                       </div>
                     </div>
                   </CarouselItem>
                   <CarouselItem>
                     <div className="p-1">
-                      <div className="rounded-lg bg-card h-[600px] flex items-center justify-center">
+                      <div className="rounded-lg bg-card h-[700px] flex items-center justify-center">
                         {/* Slide 3 content */}
                       </div>
                     </div>
