@@ -27,7 +27,7 @@ const About = () => {
       `}</style>
       
       {/* Overlay */}
-      <div className="fixed inset-0 z-0 bg-background/70 backdrop-blur-3xl" />
+      <div className="fixed inset-0 z-0 backdrop-blur-3xl" style={{ backgroundColor: '#c9c5bb' }} />
       {/* Back Button */}
       <Link to="/" className="fixed top-8 left-8 md:top-12 md:left-12 z-50 bg-white/80 hover:bg-white border border-black/20 rounded-full p-3 transition-all hover:scale-110 active:scale-95 shadow-lg" aria-label="Back to home">
         <ArrowLeft className="w-5 h-5 text-black" />
