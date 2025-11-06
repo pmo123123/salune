@@ -30,11 +30,11 @@ const About = () => {
           </div>
 
           {/* Slogan */}
-          <div className="w-full max-w-6xl mx-auto mb-12 -mt-[75px] text-center px-4">
-            <p className="text-white text-5xl md:text-[72px] font-medium mb-2 leading-tight">
+          <div className="w-full max-w-6xl mx-auto mb-12 -mt-[75px] px-4" style={{ textAlign: 'center' }}>
+            <p className="text-white text-5xl md:text-[72px] font-medium mb-2 leading-tight" style={{ textAlign: 'center' }}>
               Everyone's got a trail to blaze.
             </p>
-            <p className="text-white text-5xl md:text-[72px] font-medium italic leading-tight">
+            <p className="text-white text-5xl md:text-[72px] font-medium italic leading-tight" style={{ textAlign: 'center' }}>
               Here's where they leave their mark.
             </p>
           </div>
