@@ -8,9 +8,23 @@ const About = () => {
 
   return <div className="min-h-screen relative">
       {/* Background Image */}
-      <div className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `url(${heroBackground})`
-    }} />
+      <div 
+        className="fixed inset-0 z-0 bg-cover bg-center bg-no-repeat animate-slow-pan" 
+        style={{
+          backgroundImage: `url(${heroBackground})`,
+          animation: 'slowPan 30s ease-in-out infinite alternate'
+        }} 
+      />
+      <style>{`
+        @keyframes slowPan {
+          0% {
+            transform: scale(1) translate(0, 0);
+          }
+          100% {
+            transform: scale(1.1) translate(-2%, -2%);
+          }
+        }
+      `}</style>
       
       {/* Overlay */}
       <div className="fixed inset-0 z-0 bg-background/50 backdrop-blur-3xl" />
