@@ -54,12 +54,12 @@ const About = () => {
           </div>
 
           {/* Title */}
-          <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12 mt-[25px]">
+          <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12 mt-[25px] font-grotesk">
             Salune: The New Frontier of Creative Infrastructure
           </h1>
 
           {/* Text Content */}
-          <div className="max-w-3xl mx-auto space-y-8 text-foreground">
+          <div className="max-w-3xl mx-auto space-y-8 text-foreground font-grotesk">
             <section className="space-y-4">
               <h2 className="text-xl md:text-2xl font-semibold">
                 In every era, new technology forces society to redefine what counts as labor, ownership, and value.
